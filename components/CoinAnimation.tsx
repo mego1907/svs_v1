@@ -3,16 +3,19 @@ import { OrbitControls, useTexture } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
+import { Mesh } from "three";
 
 const CoinAnimation = () => {
-  const coinRef = useRef(null);
+  const coinRef = useRef<Mesh>(null);
   const logoRef = useRef(null);
 
   const [texture] = useTexture(["/assets/images/logo.png"]);
 
   useFrame(() => {
     // coinRef.current.rotation.y += 0.01; // Rotate around Y-axis
-    coinRef.current.rotation.x += 0.01; // Rotate around X-axis (optional)
+    if (coinRef.current) {
+      coinRef.current.rotation.x += 0.01; // Rotate around X-axis (optional)
+    }
   });
 
   useEffect(() => {
