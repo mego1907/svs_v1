@@ -96,7 +96,7 @@ const WhyChooseUs = () => {
   return (
     <div className="my-10 overflow-hidden">
       <div className="container mx-auto">
-        <h2 className="text-center text-4xl leading-snug font-semibold">
+        <h2 className="text-center md:text-4xl leading-snug font-semibold">
           Why Choose Us
         </h2>
         <p className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 font-light text-base mx-auto">
@@ -105,8 +105,11 @@ const WhyChooseUs = () => {
           clients’ success.
         </p>
 
-        <div className="grid md:grid-cols-[3fr_3fr_3fr] mt-10 ">
-          <div className="flex flex-col gap-10 md:ml-16" ref={leftCardsRef}>
+        <div className="grid md:grid-cols-[3fr_3fr_3fr] mt-10 md:gap-0 gap-10">
+          <div
+            className="flex flex-col gap-10 md:ml-16 md:px-0 px-4"
+            ref={leftCardsRef}
+          >
             {data1.map((item, index) => (
               <BuyAndSellCard
                 key={index}
@@ -127,7 +130,10 @@ const WhyChooseUs = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-10 md:ml-16" ref={rightCardsRef}>
+          <div
+            className="flex flex-col gap-10 md:ml-16 md:px-0 px-4"
+            ref={rightCardsRef}
+          >
             {data2.map((item, index) => (
               <BuyAndSellCard
                 key={index}
@@ -154,13 +160,13 @@ const BuyAndSellCard = ({
 }) => {
   return (
     <div className="bg-[#1e2739] flex">
-      <div className="flex px-10">
+      <div className="flex md:flex-row flex-col px-10">
         <div className="flex items-start p-5">
           <img src={img} alt={title} className="min-w-[60px]" />
         </div>
 
         <div className="flex flex-col p-5 px-2">
-          <h3 className="text-xl font-medium ">{title}</h3>
+          <h3 className="md:text-xl font-medium ">{title}</h3>
           <p className="text-gray-400 mt-3">{desc}</p>
         </div>
       </div>

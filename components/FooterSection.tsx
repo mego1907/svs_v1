@@ -27,7 +27,7 @@ const FooterSection = () => {
 
   return (
     <div className="flex flex-col items-center justify-center p-10 text-white">
-      <div className="flex gap-10 p-5">
+      <div className="flex flex-wrap gap-10 p-5">
         {links.map((link, index) => (
           <Link
             key={index}

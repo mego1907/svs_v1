@@ -22,7 +22,7 @@ import {
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-mainBg text-white">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-mainBg text-white overflow-hidden">
       <Header />
       <SecureComponent />
       <GetStartedSection />

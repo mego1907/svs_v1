@@ -15,6 +15,7 @@ import {
   HeaderCoinLogo5,
   HeaderCoinLogo6,
 } from "@/icons";
+import ThreeDCoin from "./CoinAnimation";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -53,9 +54,9 @@ const Header = () => {
 
   return (
     <div className="h-screen w-full overflow-hidden">
-      <div className="container grid md:grid-cols-[2fr_1.5fr] h-full mx-auto">
+      <div className="container grid md:grid-cols-[2fr_1.5fr] h-full mx-auto px-5">
         <div
-          className="flex flex-col justify-center items-start mt-40 -translate-x-60 opacity-0"
+          className="flex flex-col justify-center items-start md:mt-40 -translate-x-60 opacity-0"
           ref={textRef}
         >
           <h2 className={`md:text-5xl text-xl leading-tight`}>
@@ -74,7 +75,7 @@ const Header = () => {
           <div className="flex md:gap-8 gap-4 mt-16 md:ml-2">
             <button
               type="button"
-              className="flex gap-2 border md:p-3 rounded-lg md:px-6 items-center justify-center px-2"
+              className="flex gap-2 border md:p-3 rounded-lg md:px-6 items-center justify-center p-2"
             >
               <IoDocumentTextOutline fontSize={30} />
               <span className="md:text-lg text-sm">White Paper</span>
@@ -82,13 +83,13 @@ const Header = () => {
 
             <button
               type="button"
-              className="flex gap-4 border md:p-3 rounded-lg md:px-6 px-2 items-center justify-center bg-secondary font-semibold z-40 hover:bg-transparent transition-all"
+              className="flex gap-4 border md:p-3 rounded-lg md:px-6 px-2 p-2 items-center justify-center bg-secondary font-semibold z-40 hover:bg-transparent transition-all"
             >
               <span className="md:text-lg text-sm">Get Started</span>
               <FaArrowRightLong fontSize={20} />
             </button>
           </div>
-          <div className="grid md:grid-cols-4 w-full grid-rows-2 mt-10 opacity-30">
+          <div className="md:grid md:grid-cols-4 w-full grid-rows-2 mt-10 opacity-30 hidden">
             <div className="flex items-center justify-start py-6">
               <HeaderCoinLogo1 />
             </div>
@@ -120,14 +121,15 @@ const Header = () => {
           className="md:flex hidden flex-wrap items-center justify-center mt-20 translate-y-96 opacity-0 relative"
           ref={logoContainer}
         >
-          <Image
+          {/* <Image
             src="/assets/images/logo.png"
             width={512}
             height={512}
             alt="logo"
             ref={logoRef}
             className="z-40"
-          />
+          /> */}
+          <ThreeDCoin />
         </div>
       </div>
     </div>

@@ -92,7 +92,7 @@ const BuyAndSellSvsSection = () => {
   return (
     <div className="my-40 overflow-hidden">
       <div className="container mx-auto">
-        <h2 className="text-center text-4xl leading-snug font-semibold">
+        <h2 className="text-center md:text-4xl  leading-snug font-semibold">
           How To Buy And Sell SVS Coin
         </h2>
         <p className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 text-sm mx-auto">
@@ -100,8 +100,11 @@ const BuyAndSellSvsSection = () => {
           readable content of a page when looking at its layout.
         </p>
 
-        <div className="grid md:grid-cols-[3fr_3fr_3fr] mt-10">
-          <div className="flex flex-col gap-10 md:ml-16" ref={leftCardsRef}>
+        <div className="grid md:grid-cols-[3fr_3fr_3fr] mt-10 md:gap-0 gap-10">
+          <div
+            className="flex flex-col gap-10 md:ml-16 px-6 md:px-0"
+            ref={leftCardsRef}
+          >
             {data1.map((item, index) => (
               <BuyAndSellCard key={index} img={item.image} title={item.title} />
             ))}
@@ -115,7 +118,10 @@ const BuyAndSellSvsSection = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-10 md:ml-16" ref={rightCardsRef}>
+          <div
+            className="flex flex-col gap-10 md:ml-16  px-6 md:px-0"
+            ref={rightCardsRef}
+          >
             {data2.map((item, index) => (
               <BuyAndSellCard key={index} img={item.image} title={item.title} />
             ))}
@@ -135,7 +141,7 @@ const BuyAndSellCard = ({ img, title }: { img: string; title: string }) => {
         </div>
 
         <div className="flex items-center justify-center p-6">
-          <h3 className="text-xl font-medium">{title}</h3>
+          <h3 className="md:text-xl text-base font-medium">{title}</h3>
         </div>
       </div>
     </div>

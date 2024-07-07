@@ -64,14 +64,13 @@ const SecureComponent = () => {
     );
   }, []);
   return (
-    <div className="my-10 overflow-hidden">
+    <div className="md:my-10 overflow-hidden md:px-0 px-3">
       <div className="container mx-auto">
         <h2
-          className="text-center text-4xl leading-snug font-semibold"
+          className="text-center md:text-4xl md:leading-snug text-wrap font-semibold"
           ref={titleRef}
         >
-          Secure And Transparent Transactions Powered <br /> By Cutting-Edge
-          Blockchain
+          Secure And Transparent Transactions Powered By Cutting-Edge Blockchain
         </h2>
         <p
           className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 text-base mx-auto font-light "
@@ -83,7 +82,7 @@ const SecureComponent = () => {
         </p>
 
         <div
-          className="grid md:grid-cols-3 gap-24 mt-16 px-20"
+          className="grid md:grid-cols-3 md:gap-24 gap-14 mt-16 px-20"
           ref={allCardsRef}
         >
           <div className="flex gap-4">

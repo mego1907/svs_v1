@@ -5,13 +5,13 @@ const TheSvsCoin = () => {
   return (
     <div className="overflow-hidden">
       <div className="container mx-auto">
-        <h2 className="text-center text-4xl leading-snug font-semibold">
+        <h2 className="text-center md:text-4xl leading-snug font-semibold">
           The SVS coin
         </h2>
 
-        <div className="grid grid-cols-2 gap-10 px-40 mt-20">
+        <div className="grid md:grid-cols-2 gap-10 md:px-40 mt-20">
           <div className="flex items-center justify-center flex-col gap-16">
-            <h3 className="text-center text-4xl leading-snug font-semibold">
+            <h3 className="text-center md:text-4xl leading-snug font-semibold">
               VISION
             </h3>
             <Image
@@ -30,7 +30,7 @@ const TheSvsCoin = () => {
             </p>
           </div>
           <div className="flex items-center justify-center flex-col gap-16">
-            <h3 className="text-4xl leading-snug font-semibold">OVERVIEW</h3>
+            <h3 className="md:text-4xl leading-snug font-semibold">OVERVIEW</h3>
             <Image
               src="https://svscoin.org/wp-content/uploads/2024/07/fffffffffffffffffff2.png"
               width={540}

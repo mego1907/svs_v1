@@ -32,12 +32,12 @@ const GetStartedSection = () => {
   return (
     <div className="my-10 mt-20 overflow-hidden">
       <div className="container mx-auto">
-        <h2 className="text-center text-4xl leading-snug font-semibold">
+        <h2 className="text-center md:text-4xl leading-snug font-semibold">
           Get Started In A Few Minutes
         </h2>
 
         <div
-          className="grid md:grid-cols-3 gap-36 mt-20 px-40"
+          className="grid md:grid-cols-3 md:gap-36 gap-16 mt-20 px-40"
           ref={allCardsRef}
         >
           <div className="flex flex-col justify-center items-center gap-4">

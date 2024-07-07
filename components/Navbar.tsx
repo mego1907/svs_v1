@@ -6,6 +6,7 @@ import gsap from "gsap";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false);
 
   const logoRef = useRef(null);
   const btnsRef = useRef(null);
@@ -59,7 +60,7 @@ const Navbar = () => {
       >
         <Link
           href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse relative w-[90px] h-[90px] -translate-x-40 opacity-0"
+          className="flex items-center space-x-3 rtl:space-x-reverse relative md:w-[90px] md:h-[90px] w-[60px] h-[60px] -translate-x-40 opacity-0 md:ml-0 ml-4"
           ref={logoRef}
         >
           <Image
@@ -95,6 +96,7 @@ const Navbar = () => {
             className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-sticky"
             aria-expanded="false"
+            onClick={() => setNavbarOpen(!navbarOpen)}
           >
             <span className="sr-only">Open main menu</span>
             <svg
@@ -115,7 +117,9 @@ const Navbar = () => {
           </button>
         </div>
         <div
-          className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+          className={`items-center justify-between ${
+            navbarOpen ? "bg-slate-800" : "hidden "
+          } w-full md:flex md:w-auto md:order-1 `}
           id="navbar-sticky"
         >
           <ul
@@ -126,7 +130,7 @@ const Navbar = () => {
               <Link
                 href="/"
                 // className="block py-2 px-3 text-white bg-primary-500 rounded md:bg-transparent md:text-primary-500 md:p-0 md:dark:text-primary-500 after:w-full after:h-0.5 after:bg-primary-500 after:absolute after:-bottom-2 after:rounded-full after:left-0 relative"
-                className="block py-2 px-3 text-white bg-secondary rounded md:bg-transparent md:text-secondary md:p-0 md:dark:text-secondary after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 relative"
+                className="block py-2 px-3 text-white bg-secondary rounded md:bg-transparent md:text-secondary md:p-0 md:dark:text-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 relative"
                 aria-current="page"
               >
                 Home

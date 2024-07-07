@@ -4,10 +4,10 @@ const AboutSvsCoin = () => {
   return (
     <div className="mb-20 overflow-hidden">
       <div className="container">
-        <h3 className="text-center text-4xl leading-snug font-semibold mb-3">
+        <h3 className="text-center md:text-4xl text-xl leading-snug font-semibold mb-3">
           About SVS coin
         </h3>
-        <p className="text-center font-light text-base">
+        <p className="text-center font-light md:text-base text-sm px-4">
           The SVS Coin is the first digital currency of its kind which is aimed
           at enhancing the ease of managing funds – be in the world of
           investment, travel & tourism, hotels, hospitals and medical
@@ -16,7 +16,7 @@ const AboutSvsCoin = () => {
           project funding, globally by using modern blockchain technologies.
         </p>
 
-        <div className="grid md:grid-cols-[1.5fr_1fr] gap-8 mt-40">
+        <div className="grid md:grid-cols-[1.5fr_1fr] gap-8 md:mt-40 mt-10 md:text-left text-center md:px-0 px-4">
           <div className="flex flex-col gap-8">
             <p>
               The validity of each SVS coin is provided by a blockchain. A
