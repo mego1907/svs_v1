@@ -1,0 +1,171 @@
+"use client";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import Image from "next/image";
+import React, { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const WhyChooseUs = () => {
+  const imageRef = useRef(null);
+  const leftCardsRef = useRef(null);
+  const rightCardsRef = useRef(null);
+
+  const data1 = [
+    {
+      image: "https://svscoin.org/wp-content/uploads/2024/07/icon-4.png",
+      title: "Experience:",
+      desc: "With SVS COIN years of experience in the crypto industry, we bring deep expertise and a proven track record of delivering results.",
+    },
+    {
+      image: "https://svscoin.org/wp-content/uploads/2024/07/icon-6.png",
+      title: "Range of Services:",
+      desc: "Whether you're a seasoned investor or new to cryptocurrencies, we offer a comprehensive range of services tailored to meet your needs.",
+    },
+  ];
+
+  const data2 = [
+    {
+      image: "https://svscoin.org/wp-content/uploads/2024/07/icon-6.png",
+      title: "Approach:",
+      desc: "We prioritize our clients' needs above all else, offering personalized support and guidance every step of the way.",
+    },
+    {
+      image: "https://svscoin.org/wp-content/uploads/2024/07/icon-5.png",
+      title: "Innovation and Vision:",
+      desc: "Beyond the present, we envision the future ol finance. Our innovative solutions pave the way for tomorrow's digital economy:",
+    },
+  ];
+
+  useEffect(() => {
+    gsap.fromTo(
+      leftCardsRef.current,
+      {
+        translateY: 100,
+        opacity: 0,
+      },
+      {
+        translateY: 0,
+        opacity: 1,
+        duration: 1.5,
+        // ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: leftCardsRef.current,
+          start: "70% 100%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      rightCardsRef.current,
+      {
+        translateY: 100,
+        opacity: 0,
+      },
+      {
+        translateY: 0,
+        opacity: 1,
+        duration: 1.5,
+        // ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: rightCardsRef.current,
+          start: "70% 100%",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      imageRef.current,
+      {
+        translateY: -500,
+        opacity: 0,
+      },
+      {
+        translateY: 0,
+        opacity: 1,
+        duration: 1,
+        // ease: "power1.inOut",
+        scrollTrigger: {
+          trigger: rightCardsRef.current,
+          start: "70% 110%",
+        },
+      }
+    );
+  }, []);
+
+  return (
+    <div className="my-10">
+      <div className="container mx-auto">
+        <h2 className="text-center text-4xl leading-snug font-semibold">
+          Why Choose Us
+        </h2>
+        <p className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 font-light text-base mx-auto">
+          At SVS COIN , we stand at the forefront of the crypto revolution,
+          offering innovative solutions and unwavering commitment to our
+          clients’ success.
+        </p>
+
+        <div className="grid md:grid-cols-[3fr_3fr_3fr] mt-10 ">
+          <div className="flex flex-col gap-10 md:ml-16" ref={leftCardsRef}>
+            {data1.map((item, index) => (
+              <BuyAndSellCard
+                key={index}
+                img={item.image}
+                title={item.title}
+                desc={item.desc}
+              />
+            ))}
+          </div>
+
+          <div className="flex items-center justify-center">
+            <Image
+              src="https://svscoin.org/wp-content/uploads/2024/07/png-o.png"
+              alt=""
+              width={416}
+              height={411}
+              ref={imageRef}
+            />
+          </div>
+
+          <div className="flex flex-col gap-10 md:ml-16" ref={rightCardsRef}>
+            {data2.map((item, index) => (
+              <BuyAndSellCard
+                key={index}
+                img={item.image}
+                title={item.title}
+                desc={item.desc}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const BuyAndSellCard = ({
+  img,
+  title,
+  desc,
+}: {
+  img: string;
+  title: string;
+  desc: string;
+}) => {
+  return (
+    <div className="bg-[#1e2739] flex">
+      <div className="flex px-10">
+        <div className="flex items-start p-5">
+          <img src={img} alt={title} className="min-w-[60px]" />
+        </div>
+
+        <div className="flex flex-col p-5 px-2">
+          <h3 className="text-xl font-medium ">{title}</h3>
+          <p className="text-gray-400 mt-3">{desc}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default WhyChooseUs;
