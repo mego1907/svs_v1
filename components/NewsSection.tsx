@@ -37,7 +37,7 @@ const NewsSection = () => {
   );
 };
 
-const NewCard = ({ image, title }) => {
+const NewCard = ({ image, title }: { image: string; title: string }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <div className="relative w-[353px] h-[235px] z-40">
