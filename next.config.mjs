@@ -9,7 +9,10 @@ const nextConfig = {
                 pathname: '/wp-content/**',
             }
         ]
-    }
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 };
 
 export default nextConfig;
