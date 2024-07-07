@@ -126,7 +126,7 @@ const BuyAndSellSvsSection = () => {
   );
 };
 
-const BuyAndSellCard = ({ img, title }) => {
+const BuyAndSellCard = ({ img, title }: { img: string; title: string }) => {
   return (
     <div className="bg-[#1e2739] flex z-40">
       <div className="flex px-10">
