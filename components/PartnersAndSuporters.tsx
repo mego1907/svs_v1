@@ -10,7 +10,7 @@ const PartnersAndSuporters = () => {
     "https://svscoin.org/wp-content/uploads/2024/07/new1.png",
   ];
   return (
-    <div className="py-20">
+    <div className="py-20 overflow-hidden">
       <div className="container">
         <h2 className="text-center md:text-4xl text-2xl leading-snug font-semibold mb-20">
           Partners & Supporters

@@ -21,7 +21,7 @@ const NewsSection = () => {
   ];
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="container">
         <h2 className="text-center text-4xl leading-snug font-semibold my-16">
           In the News

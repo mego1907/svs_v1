@@ -52,7 +52,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full">
+    <div className="h-screen w-full overflow-hidden">
       <div className="container grid md:grid-cols-[2fr_1.5fr] h-full mx-auto">
         <div
           className="flex flex-col justify-center items-start mt-40 -translate-x-60 opacity-0"

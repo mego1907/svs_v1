@@ -94,7 +94,7 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <div className="my-10">
+    <div className="my-10 overflow-hidden">
       <div className="container mx-auto">
         <h2 className="text-center text-4xl leading-snug font-semibold">
           Why Choose Us

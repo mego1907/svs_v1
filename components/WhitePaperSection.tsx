@@ -3,7 +3,7 @@ import React from "react";
 
 const WhitePaperSection = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-20 overflow-hidden">
       <div className="container">
         <h2 className="text-center text-4xl leading-snug font-semibold mb-10">
           Whitepaper

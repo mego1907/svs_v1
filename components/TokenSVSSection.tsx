@@ -51,7 +51,7 @@ const TokenSVSSection = () => {
   }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="container mx-auto">
         <h2 className="text-center text-4xl leading-snug font-semibold">
           What Is Token SVS?

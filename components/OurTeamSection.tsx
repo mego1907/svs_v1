@@ -3,7 +3,7 @@ import React from "react";
 
 const OurTeamSection = () => {
   return (
-    <div className="mb-20 mt-14">
+    <div className="mb-20 mt-14 overflow-hidden">
       <div className="container">
         <h2 className="text-center text-4xl leading-snug font-semibold mb-8">
           Our Team

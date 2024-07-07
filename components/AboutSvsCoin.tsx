@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutSvsCoin = () => {
   return (
-    <div className="mb-20">
+    <div className="mb-20 overflow-hidden">
       <div className="container">
         <h3 className="text-center text-4xl leading-snug font-semibold mb-3">
           About SVS coin
