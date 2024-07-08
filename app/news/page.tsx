@@ -1,42 +1,24 @@
 import { NewCard } from "@/components/NewsSection";
 import Link from "next/link";
 import React from "react";
+import NewsCard from "./_components/NewsCard";
+import { newsData } from "@/dummy/data";
 
 const News = () => {
-  const data = [
-    {
-      image:
-        "https://svscoin.org/wp-content/uploads/2024/07/medi2-scaled-1.jpg",
-      title: "Events",
-      id: 1,
-    },
-    {
-      image:
-        "https://svscoin.org/wp-content/uploads/2024/07/medi1-scaled-1.jpg",
-      title: "Media",
-      id: 2,
-    },
-    {
-      image:
-        "https://svscoin.org/wp-content/uploads/2024/07/media3-scaled-1.jpg",
-      title: "News",
-      id: 3,
-    },
-  ];
-
   return (
     <div className="bg-mainBg min-h-screen">
       <div className="pt-40">
-        <div className="container">
+        <div className="container mx-auto">
           <h2 className="text-center text-4xl leading-snug font-semibold mb-8">
             News
           </h2>
 
-          <div className="grid grid-cols-3">
-            {data.map((item, index) => (
-              <NewCard {...item} key={index} />
+          <div className="grid md:grid-cols-3 gap-10">
+            {newsData.map((item, index) => (
+              <NewsCard {...item} key={index} />
             ))}
           </div>
+          {/* <NewCard {...item} key={index} /> */}
         </div>
       </div>
     </div>
