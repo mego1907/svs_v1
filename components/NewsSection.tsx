@@ -51,7 +51,7 @@ export const NewCard = ({
 }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-4">
-      <div className="relative w-[353px] h-[235px] z-40">
+      <div className="relative md:w-[353px] w-72 h-[235px] z-40">
         <Image src={image} alt={title} fill objectFit="contain" />
       </div>
 

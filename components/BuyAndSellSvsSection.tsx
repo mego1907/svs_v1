@@ -90,9 +90,9 @@ const BuyAndSellSvsSection = () => {
   }, []);
 
   return (
-    <div className="my-40 overflow-hidden">
+    <div className="md:my-40 my-10 max-w-full">
       <div className="container mx-auto">
-        <h2 className="text-center md:text-4xl  leading-snug font-semibold">
+        <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold">
           How To Buy And Sell SVS Coin
         </h2>
         <p className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 text-sm mx-auto">

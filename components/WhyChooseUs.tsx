@@ -94,12 +94,12 @@ const WhyChooseUs = () => {
   }, []);
 
   return (
-    <div className="my-10 overflow-hidden">
+    <div className="my-10 max-w-full">
       <div className="container mx-auto">
-        <h2 className="text-center md:text-4xl leading-snug font-semibold">
+        <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold">
           Why Choose Us
         </h2>
-        <p className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 font-light text-base mx-auto">
+        <p className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 font-light text-base mx-auto md:px-0 px-5">
           At SVS COIN , we stand at the forefront of the crypto revolution,
           offering innovative solutions and unwavering commitment to our
           clients’ success.
@@ -121,13 +121,15 @@ const WhyChooseUs = () => {
           </div>
 
           <div className="flex items-center justify-center">
-            <Image
-              src="https://svscoin.org/wp-content/uploads/2024/07/png-o.png"
-              alt=""
-              width={416}
-              height={411}
-              ref={imageRef}
-            />
+            <div className="md:w-[416px] h-[411px] w-10/12 relative">
+              <Image
+                src="https://svscoin.org/wp-content/uploads/2024/07/png-o.png"
+                alt=""
+                fill
+                objectFit="contain"
+                ref={imageRef}
+              />
+            </div>
           </div>
 
           <div

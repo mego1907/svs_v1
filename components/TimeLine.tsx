@@ -66,10 +66,10 @@ export default function TimeLine() {
   const customizedContent = (item: TimelineEvent) => {
     return (
       <Card className="text-left z-40 relative">
-        <span className="md:text-xl text-base font-semibold text-secondary pb-10">
+        <span className="md:text-xl text-sm font-semibold text-secondary pb-10">
           {item.title}
         </span>
-        <p className="text-gray-300 ">{item.desc}</p>
+        <p className="text-gray-300 md:text-base text-xs">{item.desc}</p>
       </Card>
     );
   };

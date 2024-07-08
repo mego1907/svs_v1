@@ -3,23 +3,26 @@ import React from "react";
 
 const TheSvsCoin = () => {
   return (
-    <div className="overflow-hidden">
+    <div className="max-w-full">
       <div className="container mx-auto">
-        <h2 className="text-center md:text-4xl leading-snug font-semibold">
+        <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold">
           The SVS coin
         </h2>
 
-        <div className="grid lg:grid-cols-2 gap-10 md:px-40 px-6 mt-20">
-          <div className="flex items-center justify-center flex-col md:gap-16 gap-5">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 md:px-40 px-6 mt-20">
+          <div className="flex items-center justify-center flex-col md:gap-16 ">
             <h3 className="text-center md:text-4xl text-xl leading-snug font-semibold">
               VISION
             </h3>
-            <Image
-              src="https://svscoin.org/wp-content/uploads/2024/07/fffffffffffffffffffffffffffffff.png"
-              width={540}
-              height={335}
-              alt=""
-            />
+
+            <div className="md:w-[540px] md:h-[335px] h-[200px] w-8/12 relative">
+              <Image
+                src="https://svscoin.org/wp-content/uploads/2024/07/fffffffffffffffffffffffffffffff.png"
+                fill
+                objectFit="contain"
+                alt=""
+              />
+            </div>
             <p>
               Our major advancement is to provide our members and partners with
               a much safer environment while maintaining their confidentiality
@@ -29,16 +32,18 @@ const TheSvsCoin = () => {
               make it easier to receive and send money around the world.
             </p>
           </div>
-          <div className="flex items-center justify-center flex-col md:gap-16 gap-5">
+          <div className="flex items-center justify-center flex-col md:gap-16 ">
             <h3 className="md:text-4xl text-xl leading-snug font-semibold">
               OVERVIEW
             </h3>
-            <Image
-              src="https://svscoin.org/wp-content/uploads/2024/07/fffffffffffffffffff2.png"
-              width={540}
-              height={335}
-              alt=""
-            />
+            <div className="md:w-[540px] md:h-[335px] h-[200px] w-8/12 relative">
+              <Image
+                src="https://svscoin.org/wp-content/uploads/2024/07/fffffffffffffffffff2.png"
+                fill
+                objectFit="contain"
+                alt=""
+              />
+            </div>
             <p>
               Our mission is to provide our members and partners with the best
               instant money transfer service anywhere in the world, allowing

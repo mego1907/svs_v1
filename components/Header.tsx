@@ -53,7 +53,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full overflow-hidden">
+    <div className="h-screen w-full overflow-hidden md:mt-0 mt-32">
       <div className="container grid lg:grid-cols-[2fr_1.5fr] h-full mx-auto px-5">
         <div
           className="flex flex-col justify-center items-start md:mt-40 -translate-x-60 opacity-0"
@@ -92,7 +92,7 @@ const Header = () => {
         </div>
 
         <div
-          className="md:flex hidden flex-wrap items-center justify-center mt-20 translate-y-96 opacity-0 relative"
+          className="md:flex flex-wrap items-center justify-center mt-20 translate-y-96 opacity-0 relative"
           ref={logoContainer}
         >
           {/* <Image
