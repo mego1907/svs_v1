@@ -16,25 +16,7 @@ const OurTeamSection = () => {
         </h2>
 
         <div>
-          <div className="mt-10 md:px-0 px-10">
-            <TeamSlider />
-            {/* <TeamCard
-              image="https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg"
-              name="Nader said"
-              position={"CEO"}
-            />
-
-            <TeamCard
-              image="https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-28-at-9.27.54-PM-ct-person.jpeg"
-              name="Mary Pelgone"
-              position="Developer"
-            />
-            <TeamCard
-              name="Yazan Abbasi"
-              position="CTO"
-              image="https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-28-at-9.27.51-PM-ct-person.jpeg"
-            /> */}
-          </div>
+          <TeamSlider />
         </div>
       </div>
     </div>

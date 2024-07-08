@@ -15,7 +15,7 @@ const TeamMember = () => {
   );
 
   return (
-    <div className="bg-mainBg min-h-screen text-whit">
+    <div className="bg-mainBg min-h-screen text-white">
       <div className="pt-40">
         <div className="container mx-auto">
           <div className="flex items-center justify-center flex-col gap-5">
