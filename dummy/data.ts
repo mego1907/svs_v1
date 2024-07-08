@@ -26,7 +26,7 @@ export const newsData: newType[] = [
   },
 ];
 
-type memberType = {
+export type memberType = {
   image: string;
   name: string;
   position: string;
@@ -47,7 +47,7 @@ export const teamData: memberType[] = [
     image:
       "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg",
     id: 1,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maxime sunt velit, et, recusandae iste quaerat voluptate nisi cupiditate corporis minus saepe explicabo reiciendis odio necessitatibus commodi voluptatibus ipsa quis.",
     socialMedia: {
       twitter: "https://twitter.com/nadersaid",
       linkedin: "https://www.linkedin.com/in/nadersaid/",
@@ -56,26 +56,26 @@ export const teamData: memberType[] = [
     },
   },
   {
-    name: "Farid said",
-    position: "CTO",
+    name: "Mary Pelgone",
+    position: "Developer",
     image:
-      "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg",
+      "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-28-at-9.27.54-PM-ct-person.jpeg",
     id: 2,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maxime sunt velit, et, recusandae iste quaerat voluptate nisi cupiditate corporis minus saepe explicabo reiciendis odio necessitatibus commodi voluptatibus ipsa quis.",
     socialMedia: {
-      twitter: "https://twitter.com/faridsaid",
-      linkedin: "https://www.linkedin.com/in/faridsaid/",
-      facebook: "https://www.facebook.com/faridsaid/",
-      instagram: "https://www.instagram.com/faridsaid/",
+      twitter: "https://twitter.com/marypelgone",
+      linkedin: "https://www.linkedin.com/in/marypelgone/",
+      facebook: "https://www.facebook.com/marypelgone/",
+      instagram: "https://www.instagram.com/marypelgone/",
     },
   },
   {
     name: "Omar said",
     position: "COO",
     image:
-      "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg",
+      "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-28-at-9.27.51-PM-ct-person.jpeg",
     id: 3,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maxime sunt velit, et, recusandae iste quaerat voluptate nisi cupiditate corporis minus saepe explicabo reiciendis odio necessitatibus commodi voluptatibus ipsa quis.",
     socialMedia: {
       twitter: "https://twitter.com/omarsaid",
       linkedin: "https://www.linkedin.com/in/omarsaid/",
@@ -84,12 +84,12 @@ export const teamData: memberType[] = [
     },
   },
   {
-    name: "Sara said",
+    name: "Mohand said",
     position: "CFO",
     image:
       "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg",
     id: 4,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maxime sunt velit, et, recusandae iste quaerat voluptate nisi cupiditate corporis minus saepe explicabo reiciendis odio necessitatibus commodi voluptatibus ipsa quis.",
     socialMedia: {
       twitter: "https://twitter.com/sarasaid",
       linkedin: "https://www.linkedin.com/in/sarasaid/",
@@ -103,7 +103,7 @@ export const teamData: memberType[] = [
     image:
       "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg",
     id: 5,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maxime sunt velit, et, recusandae iste quaerat voluptate nisi cupiditate corporis minus saepe explicabo reiciendis odio necessitatibus commodi voluptatibus ipsa quis.",
     socialMedia: {
       twitter: "https://twitter.com/hassansaid",
       linkedin: "https://www.linkedin.com/in/hassansaid/",
@@ -117,7 +117,7 @@ export const teamData: memberType[] = [
     image:
       "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg",
     id: 6,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maxime sunt velit, et, recusandae iste quaerat voluptate nisi cupiditate corporis minus saepe explicabo reiciendis odio necessitatibus commodi voluptatibus ipsa quis.",
     socialMedia: {
       twitter: "https://twitter.com/mohamedsaid",
       linkedin: "https://www.linkedin.com/in/mohamedsaid/",
@@ -126,12 +126,12 @@ export const teamData: memberType[] = [
     },
   },
   {
-    name: "Amine said",
+    name: "Amr said",
     position: "Head of Legal",
     image:
       "https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg",
     id: 7,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed bibendum, lectus vel dign Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque maxime sunt velit, et, recusandae iste quaerat voluptate nisi cupiditate corporis minus saepe explicabo reiciendis odio necessitatibus commodi voluptatibus ipsa quis.",
     socialMedia: {
       twitter: "https://twitter.com/aminesaid",
       linkedin: "https://www.linkedin.com/in/aminesaid/",

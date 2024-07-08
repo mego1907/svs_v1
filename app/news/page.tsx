@@ -13,7 +13,7 @@ const News = () => {
             News
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-10">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2  gap-10 px-5 md:px-0">
             {newsData.map((item, index) => (
               <NewsCard {...item} key={index} />
             ))}

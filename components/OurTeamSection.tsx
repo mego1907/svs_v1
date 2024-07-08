@@ -3,7 +3,9 @@ import React from "react";
 import { FaFacebookF } from "react-icons/fa6";
 import { BsLinkedin } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
-import { teamData } from "@/dummy/data";
+import { memberType, teamData } from "@/dummy/data";
+import { TeamSlider } from "./teams";
+import Link from "next/link";
 
 const OurTeamSection = () => {
   return (
@@ -14,15 +16,8 @@ const OurTeamSection = () => {
         </h2>
 
         <div>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-32 gap-10 mt-10">
-            {teamData.map((member) => (
-              <TeamCard
-                key={member.id}
-                image={member.image}
-                name={member.name}
-                position={member.position}
-              />
-            ))}
+          <div className="mt-10 md:px-0 px-10">
+            <TeamSlider />
             {/* <TeamCard
               image="https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg"
               name="Nader said"
@@ -50,43 +45,40 @@ export const TeamCard = ({
   image,
   name,
   position,
-}: {
-  image: string;
-  name: string;
-  position: string;
-}) => {
+  desc,
+  socialMedia,
+  id,
+}: memberType) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
-      <Image
-        src={image}
-        width={400}
-        height={400}
-        alt=""
-        className="rounded-3xl z-40"
-      />
-      <h3 className="text-2xl font-bold">{name}</h3>
-      <div className="flex gap-4">
-        <a
-          href=""
-          className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
-        >
-          <FaFacebookF color="#111827" fontSize={18} />
-        </a>
-        <a
-          href=""
-          className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
-        >
-          <BsLinkedin color="#111827" fontSize={18} />
-        </a>
-        <a
-          href=""
-          className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
-        >
-          <FaXTwitter color="#111827" fontSize={18} />
-        </a>
+    <Link href={`/team/${id}`}>
+      <div className="flex flex-col items-center justify-center gap-4">
+        <div className="lg:w-[400px] md:w-[300px] md:h-[300px] w-[200px] h-[200px] lg:h-[400px] rounded-3xl z-40 relative overflow-hidden md:px-0 px-6">
+          <Image src={image || ""} fill objectFit="cover" alt="" className="" />
+        </div>
+        <h3 className="text-2xl font-bold">{name}</h3>
+        <div className="flex gap-4">
+          <a
+            href={socialMedia.facebook}
+            className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
+          >
+            <FaFacebookF color="#111827" fontSize={18} />
+          </a>
+          <a
+            href={socialMedia.linkedin}
+            className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
+          >
+            <BsLinkedin color="#111827" fontSize={18} />
+          </a>
+          <a
+            href={socialMedia.twitter}
+            className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
+          >
+            <FaXTwitter color="#111827" fontSize={18} />
+          </a>
+        </div>
+        <p className="text-base">{position}</p>
       </div>
-      <p className="text-base">{position}</p>
-    </div>
+    </Link>
   );
 };
 
