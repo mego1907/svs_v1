@@ -1,6 +1,5 @@
 import React from "react";
-import Swiper from "swiper";
-import { SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { TeamCard } from "../OurTeamSection";
 
 const TeamSlider = () => {

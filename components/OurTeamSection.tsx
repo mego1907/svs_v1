@@ -3,6 +3,7 @@ import React from "react";
 import { FaFacebookF } from "react-icons/fa6";
 import { BsLinkedin } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
+import { teamData } from "@/dummy/data";
 
 const OurTeamSection = () => {
   return (
@@ -14,7 +15,15 @@ const OurTeamSection = () => {
 
         <div>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-32 gap-10 mt-10">
-            <TeamCard
+            {teamData.map((member) => (
+              <TeamCard
+                key={member.id}
+                image={member.image}
+                name={member.name}
+                position={member.position}
+              />
+            ))}
+            {/* <TeamCard
               image="https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg"
               name="Nader said"
               position={"CEO"}
@@ -29,7 +38,7 @@ const OurTeamSection = () => {
               name="Yazan Abbasi"
               position="CTO"
               image="https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-28-at-9.27.51-PM-ct-person.jpeg"
-            />
+            /> */}
           </div>
         </div>
       </div>
