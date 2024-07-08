@@ -6,15 +6,15 @@ import { MdOutlineMailOutline } from "react-icons/md";
 
 const FormSection = () => {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden md:mt-0 mt-10">
       <div className="container mx-auto md:px-20 px-5">
-        <div className="grid md:grid-cols-[2fr_1fr] w-full gap-20">
+        <div className="grid md:grid-cols-[2fr_1fr] w-full md:gap-20 gap-10">
           <div className="w-full flex flex-col gap-5">
-            <h2 className="text-center text-4xl leading-snug font-semibold">
+            <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold">
               Write Your Message
             </h2>
 
-            <div className="flex gap-5 w-full z-40">
+            <div className="flex md:flex-row flex-col gap-5 w-full z-40">
               <div className="w-full">
                 <input
                   type="text"

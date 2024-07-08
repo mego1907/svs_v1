@@ -9,9 +9,9 @@ const TheSvsCoin = () => {
           The SVS coin
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10 md:px-40 mt-20">
-          <div className="flex items-center justify-center flex-col gap-16">
-            <h3 className="text-center md:text-4xl leading-snug font-semibold">
+        <div className="grid md:grid-cols-2 gap-10 md:px-40 px-6 mt-20">
+          <div className="flex items-center justify-center flex-col md:gap-16 gap-5">
+            <h3 className="text-center md:text-4xl text-xl leading-snug font-semibold">
               VISION
             </h3>
             <Image
@@ -29,8 +29,10 @@ const TheSvsCoin = () => {
               make it easier to receive and send money around the world.
             </p>
           </div>
-          <div className="flex items-center justify-center flex-col gap-16">
-            <h3 className="md:text-4xl leading-snug font-semibold">OVERVIEW</h3>
+          <div className="flex items-center justify-center flex-col md:gap-16 gap-5">
+            <h3 className="md:text-4xl text-xl leading-snug font-semibold">
+              OVERVIEW
+            </h3>
             <Image
               src="https://svscoin.org/wp-content/uploads/2024/07/fffffffffffffffffff2.png"
               width={540}

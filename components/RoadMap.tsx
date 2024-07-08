@@ -3,12 +3,12 @@ import TimeLine from "./TimeLine";
 
 const RoadMap = () => {
   return (
-    <div className="my-20 overflow-hidden">
+    <div className="md:my-20 my-10 overflow-hidden md:px-0 px-4">
       <div className="container">
-        <h2 className="text-center text-4xl leading-snug font-semibold mb-6">
+        <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold mb-6">
           Roadmap
         </h2>
-        <p>
+        <p className="md:text-left text-center md:text-base text-sm">
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout.
         </p>

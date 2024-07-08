@@ -23,7 +23,7 @@ const NewsSection = () => {
   return (
     <div className="overflow-hidden">
       <div className="container">
-        <h2 className="text-center text-4xl leading-snug font-semibold my-16">
+        <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold md:my-16 my-10">
           In the News
         </h2>
 
@@ -44,7 +44,7 @@ const NewCard = ({ image, title }: { image: string; title: string }) => {
         <Image src={image} alt={title} fill objectFit="contain" />
       </div>
 
-      <h3 className="text-3xl font-semibold">{title}</h3>
+      <h3 className="md:text-3xl text-xl font-semibold">{title}</h3>
 
       <button
         type="button"

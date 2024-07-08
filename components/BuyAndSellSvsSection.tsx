@@ -65,7 +65,7 @@ const BuyAndSellSvsSection = () => {
         // ease: "power1.inOut",
         scrollTrigger: {
           trigger: rightCardsRef.current,
-          start: "70% 150%",
+          start: "70% 110%",
         },
       }
     );
@@ -83,7 +83,7 @@ const BuyAndSellSvsSection = () => {
         // ease: "power1.inOut",
         scrollTrigger: {
           trigger: rightCardsRef.current,
-          start: "70% 150%",
+          start: "70% 110%",
         },
       }
     );

@@ -8,12 +8,12 @@ const OurTeamSection = () => {
   return (
     <div className="mb-20 mt-14 overflow-hidden ">
       <div className="container">
-        <h2 className="text-center text-4xl leading-snug font-semibold mb-8">
+        <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold mb-8">
           Our Team
         </h2>
 
         <div>
-          <div className="grid md:grid-cols-3 gap-32 mt-10">
+          <div className="grid md:grid-cols-3 md:gap-32 gap-10 mt-10">
             <TeamCard
               image="https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg"
               name="Nader said"

@@ -51,12 +51,12 @@ const TokenSVSSection = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden md:px-0 px-4">
       <div className="container mx-auto">
-        <h2 className="text-center text-4xl leading-snug font-semibold">
+        <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold">
           What Is Token SVS?
         </h2>
-        <p className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 text-base mx-auto">
+        <p className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 md:text-base text-sm mx-auto">
           SVS Coin is a token developed for facilitating the payment of the
           fees, expenses and Return of investment ( ROI ) of SVS Network's
           Projects worldwide . it will be created with a strict maximum limit of
@@ -72,9 +72,9 @@ const TokenSVSSection = () => {
               ref={ref}
               header="What is Token SVS?"
               toggleable
-              className="text-xl z-40"
+              className="md:text-xl text-lg z-40"
             >
-              <p className="m-0 text-base">
+              <p className="m-0 md:text-base text-sm">
                 SVS Coin is a token developed for facilitating the payment of
                 the fees, expenses and Return of investment ( ROI ) of SVS
                 Network's Projects worldwide . it will be created with a strict
@@ -86,10 +86,10 @@ const TokenSVSSection = () => {
               ref={ref2}
               header="Can I make payments directly from an exchange?"
               toggleable
-              className="text-xl z-40"
+              className="md:text-xl text-lg z-40"
               collapsed
             >
-              <p className="m-0 text-base">
+              <p className="m-0 md:text-base text-sm">
                 The Token SVS can be available participation in a private sale
                 or through vindax.com exchange. You can buy from Vindax You can
                 also buy from exhanges and you can trade Total SVS for Exchange
@@ -101,10 +101,10 @@ const TokenSVSSection = () => {
               ref={ref3}
               header="What is the SVS coin Token asmart contract address?"
               toggleable
-              className="text-xl z-40"
+              className="md:text-xl text-lg z-40"
               collapsed
             >
-              <p className="m-0 text-base">
+              <p className="m-0 md:text-base text-sm">
                 Contract Address : TCdn1HueBe4dbN9Xn25UaFmWDSsrKFPBhB The SVS
                 token is built on top of the Tron blockchain (TRC20) network -
                 using TRC20 Tron blockchain (TRC20) is a blockchain network
