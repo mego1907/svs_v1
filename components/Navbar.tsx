@@ -3,10 +3,13 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const path = usePathname();
 
   const logoRef = useRef(null);
   const btnsRef = useRef(null);
@@ -130,7 +133,7 @@ const Navbar = () => {
               <Link
                 href="/"
                 // className="block py-2 px-3 text-white bg-primary-500 rounded md:bg-transparent md:text-primary-500 md:p-0 md:dark:text-primary-500 after:w-full after:h-0.5 after:bg-primary-500 after:absolute after:-bottom-2 after:rounded-full after:left-0 relative"
-                className="block py-2 px-3 text-white bg-secondary rounded md:bg-transparent md:text-secondary md:p-0 md:dark:text-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 relative"
+                className={`block py-2 px-3 text-white bg-secondary rounded md:bg-transparent md:text-secondary md:p-0 md:dark:text-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 relative`}
                 aria-current="page"
               >
                 Home

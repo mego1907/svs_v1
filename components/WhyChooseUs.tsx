@@ -47,11 +47,11 @@ const WhyChooseUs = () => {
       {
         translateY: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
         // ease: "power1.inOut",
         scrollTrigger: {
           trigger: leftCardsRef.current,
-          start: "70% 100%",
+          start: "70% 170%",
         },
       }
     );
@@ -65,11 +65,11 @@ const WhyChooseUs = () => {
       {
         translateY: 0,
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
         // ease: "power1.inOut",
         scrollTrigger: {
           trigger: rightCardsRef.current,
-          start: "70% 100%",
+          start: "70% 170%",
         },
       }
     );
@@ -87,7 +87,7 @@ const WhyChooseUs = () => {
         // ease: "power1.inOut",
         scrollTrigger: {
           trigger: rightCardsRef.current,
-          start: "70% 110%",
+          start: "70% 170%",
         },
       }
     );

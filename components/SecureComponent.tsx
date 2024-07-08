@@ -23,7 +23,7 @@ const SecureComponent = () => {
         duration: 0.8,
         scrollTrigger: {
           trigger: titleRef.current,
-          start: "70% 90%",
+          start: "70% 100%",
         },
       }
     );
@@ -40,7 +40,7 @@ const SecureComponent = () => {
         duration: 0.8,
         scrollTrigger: {
           trigger: descRef.current,
-          start: "70% 90%",
+          start: "50% 100%",
         },
       }
     );
@@ -55,10 +55,9 @@ const SecureComponent = () => {
         translateY: 0,
         opacity: 1,
         duration: 1.5,
-        ease: "power1.inOut",
         scrollTrigger: {
           trigger: allCardsRef.current,
-          start: "70% 90%",
+          start: "50% 110%",
         },
       }
     );
@@ -67,7 +66,7 @@ const SecureComponent = () => {
     <div className="md:my-10 overflow-hidden md:px-0 px-3">
       <div className="container mx-auto">
         <h2
-          className="text-center md:text-4xl md:leading-snug text-wrap font-semibold"
+          className="text-center md:text-4xl text-lg px-5 md:leading-snug text-wrap font-semibold"
           ref={titleRef}
         >
           Secure And Transparent Transactions Powered By Cutting-Edge Blockchain

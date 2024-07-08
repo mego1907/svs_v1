@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import { FaFacebookF } from "react-icons/fa6";
+import { BsLinkedin } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
 
 const OurTeamSection = () => {
   return (
@@ -54,12 +56,24 @@ const TeamCard = ({
         className="rounded-3xl z-40"
       />
       <h3 className="text-2xl font-bold">{name}</h3>
-      <div className="flex">
+      <div className="flex gap-4">
         <a
           href=""
           className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
         >
           <FaFacebookF color="#111827" fontSize={18} />
+        </a>
+        <a
+          href=""
+          className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <BsLinkedin color="#111827" fontSize={18} />
+        </a>
+        <a
+          href=""
+          className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
+        >
+          <FaXTwitter color="#111827" fontSize={18} />
         </a>
       </div>
       <p className="text-base">{position}</p>

@@ -19,11 +19,11 @@ const GetStartedSection = () => {
       {
         translateY: 0,
         opacity: 1,
-        duration: 1.5,
-        ease: "power1.inOut",
+        duration: 0.8,
+        // ease: "power1.inOut",
         scrollTrigger: {
           trigger: allCardsRef.current,
-          start: "70% 90%",
+          start: "50% 110%",
         },
       }
     );

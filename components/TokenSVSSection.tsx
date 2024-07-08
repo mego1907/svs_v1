@@ -26,7 +26,7 @@ const TokenSVSSection = () => {
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: collapseRef.current,
-          start: "70% 90%",
+          start: "70% 120%",
         },
       }
     );
@@ -44,7 +44,7 @@ const TokenSVSSection = () => {
         ease: "power1.inOut",
         scrollTrigger: {
           trigger: collapseRef.current,
-          start: "70% 110%",
+          start: "70% 120%",
         },
       }
     );
