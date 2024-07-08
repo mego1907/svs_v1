@@ -5,6 +5,7 @@ import { Navbar, ParticlesBackrgound } from "@/components";
 import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 import "primereact/resources/themes/lara-dark-cyan/theme.css";
 import "swiper/swiper-bundle.css";
+import SocialMedia from "@/components/SocialMedia";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
@@ -26,6 +27,8 @@ export default function RootLayout({
       <html lang="en">
         <body className={dm_sans.className}>
           <ParticlesBackrgound />
+
+          <SocialMedia />
 
           {/* Navbar */}
           <Navbar />
