@@ -10,7 +10,7 @@ import Link from "next/link";
 const OurTeamSection = () => {
   return (
     <div className="mb-20 mt-14 overflow-hidden ">
-      <div className="container">
+      <div className="container mx-auto">
         <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold mb-8">
           Our Team
         </h2>
@@ -34,7 +34,7 @@ export const TeamCard = ({
   return (
     <Link href={`/team/${id}`}>
       <div className="flex flex-col items-center justify-center gap-4">
-        <div className="lg:w-[400px] md:w-[300px] md:h-[300px] w-[200px] h-[200px] lg:h-[400px] rounded-3xl z-40 relative overflow-hidden md:px-0 px-6">
+        <div className="lg:w-[400px] w-[300px] h-[300px] lg:h-[400px] rounded-3xl z-40 relative overflow-hidden md:px-0 px-6">
           <Image src={image || ""} fill objectFit="cover" alt="" className="" />
         </div>
         <h3 className="text-2xl font-bold">{name}</h3>
