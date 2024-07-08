@@ -3,11 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const params = useParams();
+
+  console.log("params", params);
 
   const path = usePathname();
 
@@ -50,6 +54,8 @@ const Navbar = () => {
     });
   }, []);
 
+  const isActive = (href: string) => path === href;
+
   return (
     <nav
       className={`${
@@ -67,7 +73,7 @@ const Navbar = () => {
           ref={logoRef}
         >
           <Image
-            src="/assets/images/logo.png"
+            src="/assets/images/logoo.png"
             alt=""
             fill
             objectFit="contain"
@@ -133,7 +139,11 @@ const Navbar = () => {
               <Link
                 href="/"
                 // className="block py-2 px-3 text-white bg-primary-500 rounded md:bg-transparent md:text-primary-500 md:p-0 md:dark:text-primary-500 after:w-full after:h-0.5 after:bg-primary-500 after:absolute after:-bottom-2 after:rounded-full after:left-0 relative"
-                className={`block py-2 px-3 text-white bg-secondary rounded md:bg-transparent md:text-secondary md:p-0 md:dark:text-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 relative`}
+                className={`${
+                  isActive("/")
+                    ? "bg-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 md:dark:text-secondary md:text-secondary"
+                    : ""
+                } block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0   relative`}
                 aria-current="page"
               >
                 Home
@@ -142,7 +152,11 @@ const Navbar = () => {
             <li>
               <Link
                 href="/team"
-                className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className={`${
+                  isActive("/team") || path.includes("/teams")
+                    ? "bg-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 md:dark:text-secondary md:text-secondary"
+                    : ""
+                } block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0   relative`}
               >
                 Team
               </Link>
@@ -150,7 +164,11 @@ const Navbar = () => {
             <li>
               <Link
                 href="/news"
-                className="block py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary-700 md:p-0 md:dark:hover:text-primary-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                className={`${
+                  isActive("/news")
+                    ? "bg-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 md:dark:text-secondary md:text-secondary"
+                    : ""
+                } block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0   relative`}
               >
                 News
               </Link>

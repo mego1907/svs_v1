@@ -59,7 +59,7 @@ const Header = () => {
           className="flex flex-col justify-center items-start md:mt-40 -translate-x-60 opacity-0"
           ref={textRef}
         >
-          <h2 className={`md:text-5xl text-xl leading-tight`}>
+          <h2 className={`md:text-5xl text-xl md:leading-relaxed`}>
             SVS coin is First currency to change world of transaction through
             SVS coin
           </h2>
@@ -88,32 +88,6 @@ const Header = () => {
               <span className="md:text-lg text-sm">Get Started</span>
               <FaArrowRightLong fontSize={20} />
             </button>
-          </div>
-          <div className="md:grid md:grid-cols-4 w-full grid-rows-2 mt-10 opacity-30 hidden">
-            <div className="flex items-center justify-start py-6">
-              <HeaderCoinLogo1 />
-            </div>
-            <div className="flex items-center justify-start py-6">
-              <HeaderCoinLogo2 />
-            </div>
-            <div className="flex items-center justify-start py-6">
-              <HeaderCoinLogo3 />
-            </div>
-            <div className="flex items-center justify-start py-6">
-              <HeaderCoinLogo4 />
-            </div>
-            <div className="flex items-center justify-start py-6">
-              <HeaderCoinLogo5 />
-            </div>
-            <div className="flex items-center justify-start py-6">
-              <HeaderCoinLogo6 />
-            </div>
-            <div className="flex items-center justify-start py-6">
-              <HeaderCoinLogo2 />
-            </div>
-            <div className="flex items-center justify-start py-6">
-              <HeaderCoinLogo1 />
-            </div>
           </div>
         </div>
 

@@ -39,7 +39,7 @@ const FooterSection = () => {
         ))}
       </div>
       <p className="text-center text-sm">
-        © COPYRIGHT 2023 CRPTIAM | ALL RIGHTS RESERVED.
+        © COPYRIGHT 2024 CRPTIAM | ALL RIGHTS RESERVED.
       </p>
     </div>
   );

@@ -40,7 +40,7 @@ const ThreeDCoin = () => {
   return (
     // <Canvas camera={{ position: [10, 5, 1], fov: 30 }}>
     <Canvas camera={{ position: [1, 12, 0], fov: 30 }}>
-      <ambientLight intensity={2} />
+      <ambientLight intensity={3} />
       <pointLight position={[10, 10, 10]} />
       <CoinAnimation />
       <OrbitControls

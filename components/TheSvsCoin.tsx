@@ -9,7 +9,7 @@ const TheSvsCoin = () => {
           The SVS coin
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-10 md:px-40 px-6 mt-20">
+        <div className="grid lg:grid-cols-2 gap-10 md:px-40 px-6 mt-20">
           <div className="flex items-center justify-center flex-col md:gap-16 gap-5">
             <h3 className="text-center md:text-4xl text-xl leading-snug font-semibold">
               VISION

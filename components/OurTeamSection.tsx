@@ -13,7 +13,7 @@ const OurTeamSection = () => {
         </h2>
 
         <div>
-          <div className="grid md:grid-cols-3 md:gap-32 gap-10 mt-10">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-32 gap-10 mt-10">
             <TeamCard
               image="https://svscoin.org/wp-content/uploads/2024/07/WhatsApp-Image-2024-06-29-at-12.28.50-AM-ct-person.jpeg"
               name="Nader said"
@@ -37,7 +37,7 @@ const OurTeamSection = () => {
   );
 };
 
-const TeamCard = ({
+export const TeamCard = ({
   image,
   name,
   position,

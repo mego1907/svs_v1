@@ -7,16 +7,19 @@ const NewsSection = () => {
       image:
         "https://svscoin.org/wp-content/uploads/2024/07/medi2-scaled-1.jpg",
       title: "Events",
+      id: 1,
     },
     {
       image:
         "https://svscoin.org/wp-content/uploads/2024/07/medi1-scaled-1.jpg",
       title: "Media",
+      id: 2,
     },
     {
       image:
         "https://svscoin.org/wp-content/uploads/2024/07/media3-scaled-1.jpg",
       title: "News",
+      id: 3,
     },
   ];
 
@@ -37,7 +40,15 @@ const NewsSection = () => {
   );
 };
 
-const NewCard = ({ image, title }: { image: string; title: string }) => {
+export const NewCard = ({
+  image,
+  title,
+  id,
+}: {
+  image: string;
+  title: string;
+  id: number;
+}) => {
   return (
     <div className="flex flex-col items-center justify-center gap-4">
       <div className="relative w-[353px] h-[235px] z-40">
@@ -46,12 +57,12 @@ const NewCard = ({ image, title }: { image: string; title: string }) => {
 
       <h3 className="md:text-3xl text-xl font-semibold">{title}</h3>
 
-      <button
-        type="button"
+      <a
+        href={`/news/${id}`}
         className="p-2 px-6 rounded-sm bg-secondary z-40 mt-6"
       >
         Click here
-      </button>
+      </a>
     </div>
   );
 };

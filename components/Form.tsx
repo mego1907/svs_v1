@@ -8,7 +8,7 @@ const FormSection = () => {
   return (
     <div className="w-full overflow-hidden md:mt-0 mt-10">
       <div className="container mx-auto md:px-20 px-5">
-        <div className="grid md:grid-cols-[2fr_1fr] w-full md:gap-20 gap-10">
+        <div className="grid lg:grid-cols-[2fr_1fr] w-full md:gap-20 gap-10">
           <div className="w-full flex flex-col gap-5">
             <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold">
               Write Your Message

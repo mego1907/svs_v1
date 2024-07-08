@@ -62,6 +62,7 @@ const SecureComponent = () => {
       }
     );
   }, []);
+
   return (
     <div className="md:my-10 overflow-hidden md:px-0 px-3">
       <div className="container mx-auto">
@@ -72,7 +73,7 @@ const SecureComponent = () => {
           Secure And Transparent Transactions Powered By Cutting-Edge Blockchain
         </h2>
         <p
-          className="max-w-[70ch] text-center text-gray-400 mt-3 leading-7 text-base mx-auto font-light "
+          className="md:max-w-[70ch] text-center text-gray-400 mt-3 md:leading-7 text-base md:mx-auto font-light"
           ref={descRef}
         >
           Blockchain technology ensures the highest level of security and
@@ -81,7 +82,7 @@ const SecureComponent = () => {
         </p>
 
         <div
-          className="grid md:grid-cols-3 md:gap-24 gap-14 mt-16 px-20"
+          className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-24 gap-14 mt-16 px-20"
           ref={allCardsRef}
         >
           <div className="flex gap-4">

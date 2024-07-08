@@ -37,7 +37,7 @@ const GetStartedSection = () => {
         </h2>
 
         <div
-          className="grid md:grid-cols-3 md:gap-36 gap-16 mt-20 px-40"
+          className="grid md:grid-cols-2 lg:grid-cols-3 lg:gap-36 gap-16 mt-20 px-40"
           ref={allCardsRef}
         >
           <div className="flex flex-col justify-center items-center gap-4">

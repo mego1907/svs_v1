@@ -17,7 +17,7 @@ const WhitePaperSection = () => {
           the use of websites.
         </p>
 
-        <div className="grid md:grid-cols-2 md:px-40 px-5 md:gap-0 gap-5 mt-20">
+        <div className="grid lg:grid-cols-2 md:px-40 px-5 md:gap-0 gap-5 mt-20">
           <div className="flex items-center justify-center">
             <Image
               src="https://svscoin.org/wp-content/uploads/2024/07/blockchain.png"
