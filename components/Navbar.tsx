@@ -143,7 +143,7 @@ const Navbar = () => {
                   isActive("/")
                     ? "bg-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 md:dark:text-secondary md:text-secondary"
                     : ""
-                } block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0   relative`}
+                } block py-2 px-3 text-white  rounded md:bg-transparent md:p-0 z-40 relative`}
                 aria-current="page"
               >
                 Home
@@ -156,7 +156,7 @@ const Navbar = () => {
                   isActive("/team") || path.includes("/teams")
                     ? "bg-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 md:dark:text-secondary md:text-secondary"
                     : ""
-                } block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0   relative`}
+                } block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0 z-40  relative`}
               >
                 Team
               </Link>
@@ -168,7 +168,7 @@ const Navbar = () => {
                   isActive("/news")
                     ? "bg-secondary md:after:w-full after:h-0.5 after:bg-secondary after:absolute after:-bottom-2 after:rounded-full after:left-0 md:dark:text-secondary md:text-secondary"
                     : ""
-                } block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0   relative`}
+                } block py-2 px-3 text-white  rounded md:bg-transparent  md:p-0  z-40 relative`}
               >
                 News
               </Link>

@@ -3,7 +3,6 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { TeamCard } from "../OurTeamSection";
 import { teamData } from "@/dummy/data";
-import Link from "next/link";
 
 const TeamSlider = () => {
   return (

@@ -1,23 +1,35 @@
 import React from "react";
+import { BiLogoTelegram } from "react-icons/bi";
 import { BsLinkedin } from "react-icons/bs";
-import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { FaTelegramPlane } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTelegram,
+  FaXTwitter,
+} from "react-icons/fa6";
 
 const SocialMedia = () => {
   const socialLinks = [
     {
       name: "facebook",
-      link: "http://facebook.com",
+      link: "https://www.facebook.com/profile.php?id=100090081681422",
       icon: <FaFacebookF color="#111827" fontSize={15} />,
     },
     {
       name: "twitter",
-      link: "http://x.com",
+      link: "https://x.com/Svs_coins",
       icon: <FaXTwitter color="#111827" fontSize={15} />,
     },
     {
-      name: "linkedin",
-      link: "http://linkedin.com",
-      icon: <BsLinkedin color="#111827" fontSize={15} />,
+      name: "telegram",
+      link: "https://t.me/svscoin2",
+      icon: <BiLogoTelegram color="#111827" fontSize={15} />,
+    },
+    {
+      name: "instagram",
+      link: "https://www.instagram.com/svscoins/",
+      icon: <FaInstagram color="#111827" fontSize={15} />,
     },
   ];
 

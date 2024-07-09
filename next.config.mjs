@@ -7,6 +7,18 @@ const nextConfig = {
                 hostname: "svscoin.org",
                 port: '',
                 pathname: '/wp-content/**',
+            },
+            {
+                protocol: "https",
+                hostname: "s.geckoterminal.com",
+                port: '',
+                pathname: "/_next/static/media/**"
+            },
+            {
+                protocol: "https",
+                hostname: "upload.wikimedia.org",
+                port: '',
+                pathname: "/wikipedia/commons/**"
             }
         ]
     },

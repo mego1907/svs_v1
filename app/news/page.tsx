@@ -6,7 +6,7 @@ import { newsData } from "@/dummy/data";
 
 const News = () => {
   return (
-    <div className="bg-mainBg min-h-screen">
+    <div className="bg-mainBg min-h-screen text-whit">
       <div className="pt-40">
         <div className="container mx-auto">
           <h2 className="text-center text-4xl leading-snug font-semibold mb-8">
