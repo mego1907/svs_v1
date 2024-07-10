@@ -13,6 +13,13 @@ const getData = async () => {
   return news.Data;
 };
 
+type SingleNewType = {
+  id: number;
+  imageurl: string;
+  title: string;
+  body: string;
+};
+
 const News = () => {
   const [newsData, setNewsData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
@@ -23,7 +30,7 @@ const News = () => {
 
       if (searchValue) {
         setNewsData(
-          data?.filter((item) =>
+          data?.filter((item: SingleNewType) =>
             item.title.toLowerCase().includes(searchValue.toLowerCase())
           )
         );
@@ -55,7 +62,7 @@ const News = () => {
           </div>
 
           <div className="flex flex-col  gap-10 px-5 md:px-0">
-            {newsData.map((item, index) => (
+            {newsData.map((item: SingleNewType, index) => (
               <NewsCard {...item} key={index} />
             ))}
           </div>
