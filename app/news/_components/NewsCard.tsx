@@ -12,7 +12,7 @@ type NewsCardProps = {
 
 const NewsCard = ({ image, body, title, id, imageurl }: NewsCardProps) => {
   return (
-    <div className="grid grid-cols-[1fr_3fr] gap-6">
+    <div className="grid md:grid-cols-[1fr_3fr] gap-6">
       {/* Image */}
       <div className=" h-72 relative rounded-md overflow-hidden">
         <img
