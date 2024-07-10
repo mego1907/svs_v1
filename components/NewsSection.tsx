@@ -7,7 +7,6 @@ type SingleNewType = {
   imageurl: string;
   title: string;
   body: string;
-  image?: string;
 };
 
 const NewsSection = () => {
@@ -70,7 +69,7 @@ export const NewCard = ({
   id,
   imageurl,
 }: {
-  image: string;
+  image?: string;
   title: string;
   id: number;
   imageurl: string;
@@ -85,7 +84,7 @@ export const NewCard = ({
           objectFit="contain"
         /> */}
         <img
-          src={image ? image : imageurl}
+          src={imageurl}
           alt={title}
           className="w-full h-full object-contain"
         />
