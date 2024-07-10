@@ -2,6 +2,14 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
+type SingleNewType = {
+  id: number;
+  imageurl: string;
+  title: string;
+  body: string;
+  image?: string;
+};
+
 const NewsSection = () => {
   const [newsData, setNewsData] = useState([]);
   useEffect(() => {
@@ -47,7 +55,7 @@ const NewsSection = () => {
         </h2>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {newsData.slice(0, 3).map((item, index) => (
+          {newsData.slice(0, 3).map((item: SingleNewType, index) => (
             <NewCard key={index} {...item} />
           ))}
         </div>
