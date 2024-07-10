@@ -12,9 +12,16 @@ const getData = async () => {
   return news.Data[1];
 };
 
+type NewType = {
+  id: number;
+  imageurl: string;
+  title: string;
+  body: string;
+};
+
 const SingleNew = () => {
   const { id } = useParams();
-  const [singleNew, setSingleNew] = useState({});
+  const [singleNew, setSingleNew] = useState<NewType | undefined>(undefined);
 
   useEffect(() => {
     const getNewsData = async () => {
