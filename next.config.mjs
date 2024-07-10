@@ -19,11 +19,20 @@ const nextConfig = {
                 hostname: "upload.wikimedia.org",
                 port: '',
                 pathname: "/wikipedia/commons/**"
+            },
+            {
+                protocol: "https",
+                hostname: "images.cryptocompare.com",
+                port: '',
+                pathname: "/news/default/**"
             }
         ]
     },
     eslint: {
         ignoreDuringBuilds: true,
+    },
+    api: {
+        externalResolver: true,
     },
 };
 

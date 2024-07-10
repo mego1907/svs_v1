@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaFacebookF, FaInstagram } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa6";
 import { BsLinkedin } from "react-icons/bs";
 import { FaXTwitter } from "react-icons/fa6";
 import { memberType, teamData } from "@/dummy/data";
@@ -63,6 +63,15 @@ export const TeamCard = ({
               className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
             >
               <FaXTwitter color="#111827" fontSize={18} />
+            </a>
+          )}
+
+          {socialMedia.linkedin && (
+            <a
+              href={socialMedia.linkedin}
+              className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
+            >
+              <FaLinkedin color="#111827" fontSize={18} />
             </a>
           )}
         </div>

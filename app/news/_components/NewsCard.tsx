@@ -3,23 +3,32 @@ import Link from "next/link";
 import React from "react";
 
 type NewsCardProps = {
-  image: string;
-  desc: string;
+  image?: string;
+  body: string;
   title: string;
   id: number;
+  imageurl: string;
 };
 
-const NewsCard = ({ image, desc, title, id }: NewsCardProps) => {
+const NewsCard = ({ image, body, title, id, imageurl }: NewsCardProps) => {
   return (
-    <div className="grid grid-rows-2">
+    <div className="grid grid-cols-[1fr_3fr] gap-6">
       {/* Image */}
       <div className=" h-72 relative rounded-md overflow-hidden">
-        <Image src={image} alt={title} fill objectFit="cover" />
+        <img
+          src={imageurl}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
       </div>
       {/* Title And Desc */}
-      <div className="pt-4">
-        <h3 className="md:text-2xl text-lg font-semibold mb-3">{title}</h3>
-        <p className="mb-5 text-gray-400 md:text-base text-sm">{desc}</p>
+      <div className="pt-4 flex flex-col justify-between items-start">
+        <div>
+          <h3 className="md:text-2xl text-lg font-semibold mb-3">{title}</h3>
+          <p className="mb-5 text-gray-400 md:text-base text-sm">
+            {body.slice(0, 800)}
+          </p>
+        </div>
         <Link
           href={`/news/${id}`}
           className="p-2 px-6 rounded-sm bg-secondary z-40 mt-6"

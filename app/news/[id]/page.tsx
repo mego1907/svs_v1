@@ -2,10 +2,27 @@
 import { newsData } from "@/dummy/data";
 import Image from "next/image";
 import { useParams } from "next/navigation";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useState } from "react";
+
+const getData = async () => {
+  const response = await fetch(
+    "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
+  );
+  const news = await response.json();
+  return news.Data[1];
+};
 
 const SingleNew = () => {
   const { id } = useParams();
+  const [singleNew, setSingleNew] = useState({});
+
+  useEffect(() => {
+    const getNewsData = async () => {
+      setSingleNew(await getData());
+    };
+
+    getNewsData();
+  }, []);
 
   const selectedNew = useMemo(
     () => newsData.find((item: { id: number }) => item.id === +id),
@@ -16,10 +33,14 @@ const SingleNew = () => {
     <div className="min-h-screen bg-mainBg text-whit">
       <div className="container mx-auto pt-32 text-center flex flex-col items-center justify-center ">
         <div className="relative w-10/12 h-[500px] mb-10">
-          <Image src={selectedNew?.image || ""} fill objectFit="cover" alt="" />
+          <img
+            src={singleNew?.imageurl}
+            className="w-full h-full object-cover"
+            alt=""
+          />
         </div>
-        <h2 className="text-3xl font-bold mb-6">{selectedNew?.title}</h2>
-        <p className="w-10/12">{selectedNew?.desc}</p>
+        <h2 className="text-3xl font-bold mb-6">{singleNew?.title}</h2>
+        <p className="w-10/12">{singleNew?.body}</p>
       </div>
     </div>
   );
