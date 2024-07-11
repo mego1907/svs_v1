@@ -6,7 +6,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 
 const FormSection = () => {
   return (
-    <div className="w-full overflow-hidden md:mt-0 mt-10">
+    <div className="w-full overflow-hidden md:mt-0 pt-28" id="contactus">
       <div className="container mx-auto md:px-20 px-5">
         <div className="grid lg:grid-cols-[2fr_1fr] w-full md:gap-20 gap-10">
           <div className="w-full flex flex-col gap-5">

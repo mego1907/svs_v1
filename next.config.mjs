@@ -25,7 +25,13 @@ const nextConfig = {
                 hostname: "images.cryptocompare.com",
                 port: '',
                 pathname: "/news/default/**"
-            }
+            },
+            {
+                protocol: "https",
+                hostname: "svscoin.org",
+                port: '',
+                pathname: "/theme-assets/**"
+            },
         ]
     },
     eslint: {

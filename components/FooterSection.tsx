@@ -8,19 +8,23 @@ const FooterSection = () => {
       name: "Home",
     },
     {
-      link: "/buy-sell",
+      link: "#partners",
       name: "Buy Sell",
     },
     {
-      link: "/token-sale",
-      name: "Token Sale",
+      link: "#news",
+      name: "news",
     },
     {
-      link: "/board-advisor",
+      link: "#listing",
+      name: "listing",
+    },
+    {
+      link: "#roadmap",
       name: "Board Advisor",
     },
     {
-      link: "/contact",
+      link: "#contactus",
       name: "Contact",
     },
   ];
@@ -39,7 +43,7 @@ const FooterSection = () => {
         ))}
       </div>
       <p className="text-center text-sm">
-        © COPYRIGHT 2024 CRPTIAM | ALL RIGHTS RESERVED.
+        ©️ COPYRIGHT 2024 SVS | ALL RIGHTS RESERVED.
       </p>
     </div>
   );

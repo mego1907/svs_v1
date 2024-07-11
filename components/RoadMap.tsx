@@ -3,7 +3,7 @@ import TimeLine from "./TimeLine";
 
 const RoadMap = () => {
   return (
-    <div className="md:my-20 my-10 overflow-hidden md:px-0 px-4">
+    <div className="md:my-20 my-10 overflow-hidden md:px-0 px-4" id="roadmap">
       <div className="container">
         <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold mb-6">
           Roadmap

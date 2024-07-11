@@ -73,7 +73,8 @@ const Navbar = () => {
           ref={logoRef}
         >
           <Image
-            src="/assets/images/logoo.png"
+            // src="/assets/images/logoo.png"
+            src="https://svscoin.org/theme-assets/images-3d-graphics/ctcbig.png"
             alt=""
             fill
             objectFit="contain"
@@ -85,7 +86,7 @@ const Navbar = () => {
             className="flex md:gap-4 gap-2 translate-x-40 opacity-0"
             ref={btnsRef}
           >
-            <button
+            {/* <button
               type="button"
               className="text-white bg-transparent border border-white font-medium rounded-lg md:text-base text-xs md:px-6 px-4 py-1 md:py-2 text-center"
             >
@@ -97,7 +98,7 @@ const Navbar = () => {
               className="text-gray-800 bg-secondary hover:bg-secondary focus:text-secondaryfocus:outline-none focus:ring-secondary font-medium rounded-lg md:text-base text-xs md:px-6 px-4 py-1 md:py-2 text-center "
             >
               Register
-            </button>
+            </button> */}
           </div>
           <button
             data-collapse-toggle="navbar-sticky"

@@ -7,15 +7,9 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 import { DM_Sans, Inter, Montserrat } from "next/font/google";
-import {
-  HeaderCoinLogo1,
-  HeaderCoinLogo2,
-  HeaderCoinLogo3,
-  HeaderCoinLogo4,
-  HeaderCoinLogo5,
-  HeaderCoinLogo6,
-} from "@/icons";
+
 import ThreeDCoin from "./CoinAnimation";
+import { useRouter } from "next/navigation";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -25,6 +19,8 @@ const Header = () => {
   const logoRef = useRef(null);
   const textRef = useRef(null);
   const logoContainer = useRef(null);
+
+  const router = useRouter();
 
   useEffect(() => {
     // ..coin animation
@@ -73,21 +69,22 @@ const Header = () => {
           </p>
 
           <div className="flex md:gap-8 gap-4 mt-16 md:ml-2">
-            <button
-              type="button"
+            <a
+              href="https://svscoin.org/whitepaper"
+              target="_blank"
               className="flex gap-2 border md:p-3 rounded-lg md:px-6 items-center justify-center p-2"
             >
               <IoDocumentTextOutline fontSize={30} />
               <span className="md:text-lg text-sm">White Paper</span>
-            </button>
+            </a>
 
-            <button
-              type="button"
+            <a
+              href="#partners"
               className="flex gap-4 border md:p-3 rounded-lg md:px-6 px-2 p-2 items-center justify-center bg-secondary font-semibold z-40 hover:bg-transparent transition-all"
             >
-              <span className="md:text-lg text-sm">Get Started</span>
+              <span className="md:text-lg text-sm">Buy SVS</span>
               <FaArrowRightLong fontSize={20} />
-            </button>
+            </a>
           </div>
         </div>
 

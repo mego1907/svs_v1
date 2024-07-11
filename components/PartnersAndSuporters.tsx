@@ -38,7 +38,7 @@ const PartnersAndSuporters = () => {
 
   return (
     <>
-      <div className="md:py-20 pt-10 overflow-hidden">
+      <div className="md:pt-28 pt-20 overflow-hidden" id="partners">
         <div className="container">
           <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold md:mb-20 mb-8">
             Our Partners
@@ -55,7 +55,7 @@ const PartnersAndSuporters = () => {
           </div>
         </div>
       </div>
-      <div className="md:py-20 pt-10 overflow-hidden">
+      <div className="md:pt-28 pt-10 overflow-hidden" id="listing">
         <div className="container">
           <h2 className="text-center md:text-4xl text-xl leading-snug font-semibold md:mb-20 mb-8">
             Listed On
