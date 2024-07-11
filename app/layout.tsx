@@ -26,21 +26,6 @@ export default function RootLayout({
   return (
     <PrimeReactProvider>
       <html lang="en">
-        <head>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, maximum-scale=1"
-          />
-          <meta property="og:url" content="https://svs-v1.vercel.app" />
-          <meta property="og:type" content="article" />
-          <meta property="og:title" content="SVS" />
-          <meta property="og:description" content="SVS coin" />
-          <meta
-            property="og:image"
-            content="https://svs-v1.vercel.app/assets/images/logo-share.jpg"
-          />
-          <meta property="fb:app_id" content="1008136771035163" />
-        </head>
         {/* <head>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
@@ -54,6 +39,7 @@ export default function RootLayout({
 
           <title>SVS</title>
         </head> */}
+
         <body className={dm_sans.className}>
           <ParticlesBackrgound />
 

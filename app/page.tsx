@@ -19,10 +19,17 @@ import {
   WhitePaperSection,
   WhyChooseUs,
 } from "@/components";
+import SEO from "@/components/SEO";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-mainBg text-white overflow-hidden">
+      <SEO
+        url="https://svs-v1.vercel.app"
+        title={"SVS"}
+        image="https://svs-v1.vercel.app/assets/images/logo-share.jpg"
+        description="SVS coin"
+      />
       <Header />
       <SecureComponent />
       <GetStartedSection />

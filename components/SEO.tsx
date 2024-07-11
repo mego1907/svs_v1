@@ -9,34 +9,19 @@ interface SEOProps {
   image: string;
 }
 
-const SEO: React.FC = () => {
+const SEO: React.FC<SEOProps> = ({ url, title, description, image }) => {
   return (
     <Head>
-      <title>SVS</title>
-      <meta name="description" content="SVS coin" />
-      <link rel="shortcut icon" href="/assets/images/logoo.png" />
-      <link
-        rel="shortcut icon"
-        href="/assets/images/logo-share.png"
-        type="image/x-icon"
-      />
-      <meta property="og:title" content="SVS" />
-      <meta property="og:description" content="SVS coin" />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://svs-v1.vercel.app/" />
       <meta
-        property="og:image"
-        content="https://svs-v1.vercel.app/assets/images/logo-share.jpg"
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
       />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:title" content="SVS" />
-      <meta property="twitter:description" content="SVS coin" />
-      <meta
-        property="twitter:image"
-        content="https://svs-v1.vercel.app/assets/images/logo-share.jpg"
-      />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="fb:app_id" content="1008136771035163" />
     </Head>
   );
 };
