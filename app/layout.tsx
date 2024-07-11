@@ -12,11 +12,6 @@ const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "SVS ",
-  icons: ["/assets/images/logo.png"],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{

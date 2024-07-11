@@ -9,10 +9,10 @@ interface SEOProps {
   image: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ title, description, url, image }) => {
+const SEO: React.FC = () => {
   return (
     <Head>
-      <title>{title}</title>
+      <title>SVS</title>
       <meta name="description" content="SVS coin" />
       <meta property="og:title" content="SVS" />
       <meta property="og:description" content="SVS coin" />
