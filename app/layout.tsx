@@ -12,30 +12,11 @@ const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
-// export const metadata: Metadata = {
-//   title: "SVS ",
-//   description: "SVS coin",
-//   openGraph: {
-//     type: "website",
-//     url: "https://svs-v1.vercel.app/",
-//     title: "SVS ",
-//     description: "SVS coin",
-//     images: [
-//       {
-//         url: "https://nextjs.org/og.png", // Must be an absolute URL
-//         width: 800,
-//         height: 600,
-//       },
-//       {
-//         url: "https://nextjs.org/og-alt.png", // Must be an absolute URL
-//         width: 1800,
-//         height: 1600,
-//         alt: "My custom alt",
-//       },
-//     ],
-//   },
-//   icons: ["/assets/images/logo.png", "/assets/images/logo-share.jpg"],
-// };
+export const metadata: Metadata = {
+  title: "SVS ",
+  description: "SVS coin",
+  icons: ["/assets/images/logo.png", "/assets/images/logo-share.jpg"],
+};
 
 export default function RootLayout({
   children,
@@ -45,7 +26,7 @@ export default function RootLayout({
   return (
     <PrimeReactProvider>
       <html lang="en">
-        <head>
+        {/* <head>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
           <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico" />
@@ -57,7 +38,7 @@ export default function RootLayout({
           />
 
           <title>SVS</title>
-        </head>
+        </head> */}
         <body className={dm_sans.className}>
           <ParticlesBackrgound />
 
