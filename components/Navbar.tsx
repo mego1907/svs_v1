@@ -9,10 +9,6 @@ const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-  const params = useParams();
-
-  console.log("params", params);
-
   const path = usePathname();
 
   const logoRef = useRef(null);
