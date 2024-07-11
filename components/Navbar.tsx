@@ -67,10 +67,11 @@ const Navbar = () => {
           scroll ? "py-2" : "py-4"
         }`}
       >
-        <Link
-          href="/"
+        <a
+          href="https://svscoin.org/theme-assets/images-3d-graphics/ctcbig.png"
           className="flex items-center space-x-3 rtl:space-x-reverse relative md:w-[90px] md:h-[90px] w-[60px] h-[60px] -translate-x-40 opacity-0 md:ml-0 ml-4"
           ref={logoRef}
+          target="_blank"
         >
           <Image
             src="/assets/images/logoo.png"
@@ -80,7 +81,7 @@ const Navbar = () => {
             objectFit="contain"
             ref={logoRef}
           />
-        </Link>
+        </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <div
             className="flex md:gap-4 gap-2 translate-x-40 opacity-0"

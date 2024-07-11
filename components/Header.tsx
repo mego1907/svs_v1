@@ -70,9 +70,10 @@ const Header = () => {
 
           <div className="flex md:gap-8 gap-4 mt-16 md:ml-2">
             <a
-              href="https://svscoin.org/whitepaper"
+              href="/assets/whitepaper.pdf"
               target="_blank"
               className="flex gap-2 border md:p-3 rounded-lg md:px-6 items-center justify-center p-2"
+              download={true}
             >
               <IoDocumentTextOutline fontSize={30} />
               <span className="md:text-lg text-sm">White Paper</span>

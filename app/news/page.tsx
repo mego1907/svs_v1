@@ -4,14 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import NewsCard from "./_components/NewsCard";
 import { newsData } from "@/dummy/data";
-
-const getData = async () => {
-  const response = await fetch(
-    "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
-  );
-  const news = await response.json();
-  return news.Data;
-};
+import Loading from "@/components/Loading";
 
 type SingleNewType = {
   id: number;
@@ -21,11 +14,25 @@ type SingleNewType = {
 };
 
 const News = () => {
+  const [loading, setLoading] = useState(false);
   const [newsData, setNewsData] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
     const getNewsData = async () => {
+      setLoading(true);
+      const getData = async () => {
+        const response = await fetch(
+          "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
+        );
+
+        if (response.status === 200) {
+          setLoading(false);
+        }
+        const news = await response.json();
+        return news.Data;
+      };
+
       const data = await getData();
 
       if (searchValue) {
@@ -62,6 +69,8 @@ const News = () => {
           </div>
 
           <div className="flex flex-col  gap-10 px-5 md:px-0 ">
+            {loading && <Loading />}
+
             {newsData.map((item: SingleNewType, index) => (
               <NewsCard {...item} key={index} />
             ))}
