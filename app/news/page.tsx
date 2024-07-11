@@ -61,7 +61,7 @@ const News = () => {
             </div>
           </div>
 
-          <div className="flex flex-col  gap-10 px-5 md:px-0">
+          <div className="flex flex-col  gap-10 px-5 md:px-0 ">
             {newsData.map((item: SingleNewType, index) => (
               <NewsCard {...item} key={index} />
             ))}
