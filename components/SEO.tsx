@@ -14,7 +14,7 @@ const SEO: React.FC = () => {
     <Head>
       <title>SVS</title>
       <meta name="description" content="SVS coin" />
-      <link rel="icon" href="/assets/images/logoo.png" />
+      <link rel="shortcut icon" href="/assets/images/logoo.png" />
       <link
         rel="shortcut icon"
         href="/assets/images/logo-share.png"
@@ -23,7 +23,7 @@ const SEO: React.FC = () => {
       <meta property="og:title" content="SVS" />
       <meta property="og:description" content="SVS coin" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://svscoin.org/" />
+      <meta property="og:url" content="https://svs-v1.vercel.app/" />
       <meta property="og:image" content="/assets/images/logo-share.jpg" />
     </Head>
   );
