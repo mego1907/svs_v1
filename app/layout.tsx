@@ -20,16 +20,6 @@ export default function RootLayout({
   return (
     <PrimeReactProvider>
       <html lang="en">
-        {/* <head>
-          <title>SVS</title>
-          <meta property="og:image" content="/assets/images/logoo.png" />
-          <meta name="description" content="SVS coin" />
-          <link
-            rel="shortcut icon"
-            href="/assets/images/logoo.png"
-            type="image/x-icon"
-          />
-        </head> */}
         <SEO />
         <body className={dm_sans.className}>
           <ParticlesBackrgound />

@@ -24,7 +24,19 @@ const SEO: React.FC = () => {
       <meta property="og:description" content="SVS coin" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://svs-v1.vercel.app/" />
-      <meta property="og:image" content="/assets/images/logo-share.jpg" />
+      <meta
+        property="og:image"
+        content="https://svs-v1.vercel.app/assets/images/logo-share.jpg"
+      />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:title" content="SVS" />
+      <meta property="twitter:description" content="SVS coin" />
+      <meta
+        property="twitter:image"
+        content="https://svs-v1.vercel.app/assets/images/logo-share.jpg"
+      />
     </Head>
   );
 };
