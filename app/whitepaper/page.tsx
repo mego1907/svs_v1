@@ -1,8 +1,6 @@
 import React from "react";
 
-const page = ({ props }) => {
-  console.log("props", props);
-
+const page = () => {
   return (
     <iframe
       src="/whitepaper.pdf"
