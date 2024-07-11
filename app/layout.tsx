@@ -35,7 +35,6 @@ export default function RootLayout({
             name="viewport"
             content="width=device-width, initial-scale=1, maximum-scale=1"
           />
-          <title>SVS</title>
           <meta property="og:url" content="https://svs-v1.vercel.app" />
           <meta property="og:type" content="article" />
           <meta property="og:title" content="SVS" />
