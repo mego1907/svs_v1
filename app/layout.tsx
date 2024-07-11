@@ -46,9 +46,29 @@ export default function RootLayout({
     <PrimeReactProvider>
       <html lang="en">
         <head>
-          <link rel="icon" href="/assets/images/logo-share.jpg" />
-          <link rel="apple-touch-icon" href="/assets/images/logoo.png" />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/assets/images/logo-share.jpg"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/assets/images/logo-share.jpg"
+          />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/assets/images/logoo.png"
+          />
           <meta name="description" content="SVS coin" />
+          <link
+            rel="mask-icon"
+            href="/assets/images/logo-share.jpg"
+            color="#fff"
+          />
           <title>SVS</title>
         </head>
         <body className={dm_sans.className}>
