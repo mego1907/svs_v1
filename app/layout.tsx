@@ -27,7 +27,10 @@ export default function RootLayout({
     <PrimeReactProvider>
       <html lang="en">
         <head>
-          <meta property="og:image" content="/assets/images/logo-share.jpg" />
+          <meta
+            property="og:image"
+            content="https://svs-v1.vercel.app/assets/images/logo-share.jpg"
+          />
         </head>
         {/* <head>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
