@@ -18,7 +18,7 @@ const SEO: React.FC = () => {
       <meta property="og:description" content="SVS coin" />
       <meta property="og:image" content={"/assets/images/logo-share.jpg"} />
       <meta property="og:type" content="website" />
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:card" content="/assets/images/logo-share.jpg" />
       <meta property="twitter:title" content={"SVS"} />
       <meta property="twitter:description" content={"SVS coin"} />
       <meta
