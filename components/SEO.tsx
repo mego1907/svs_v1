@@ -25,10 +25,11 @@ const SEO: React.FC = () => {
         property="twitter:image"
         content={"/assets/images/logo-share.jpg"}
       />
-      <meta property="og:image" content="/assets/images/logo-share.jpg" />
+      <meta
+        property="og:image"
+        content="http://localhost:3000/_next/image?url=%2Fassets%2Fimages%2Flogoo.png&w=3840&q=75"
+      />
       <meta property="og:image:type" content="jpg" />
-      <meta property="og:image:width" content="300" />
-      <meta property="og:image:height" content="300" />
     </Head>
   );
 };
