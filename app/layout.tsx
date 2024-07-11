@@ -12,6 +12,25 @@ const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
+export const metadata: Metadata = {
+  title: "SVS ",
+  description: "SVS coin",
+  openGraph: {
+    type: "website",
+    url: "https://svs-v1.vercel.app/",
+    title: "SVS ",
+    description: "SVS coin",
+    images: [
+      {
+        url: "https://svs-v1.vercel.app/assets/images/logo-share.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  icons: ["/assets/images/logo.png"],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +39,6 @@ export default function RootLayout({
   return (
     <PrimeReactProvider>
       <html lang="en">
-        <SEO />
         <body className={dm_sans.className}>
           <ParticlesBackrgound />
 
