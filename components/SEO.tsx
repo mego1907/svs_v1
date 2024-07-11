@@ -18,18 +18,8 @@ const SEO: React.FC = () => {
       <meta property="og:title" content="SVS" />
       <meta property="og:description" content="SVS coin" />
       <meta property="og:type" content="website" />
-      <meta property="twitter:card" content="/assets/images/logo-share.jpg" />
-      <meta property="twitter:title" content={"SVS"} />
-      <meta property="twitter:description" content={"SVS coin"} />
-      <meta
-        property="twitter:image"
-        content={"/assets/images/logo-share.jpg"}
-      />
-      <meta
-        property="og:image"
-        content="http://localhost:3000/_next/image?url=%2Fassets%2Fimages%2Flogoo.png&w=3840&q=75"
-      />
-      <meta property="og:image:type" content="jpg" />
+      <meta property="og:url" content="https://svscoin.org/" />
+      <meta property="og:image" content="/assets/images/logo-share.jpg" />
     </Head>
   );
 };
