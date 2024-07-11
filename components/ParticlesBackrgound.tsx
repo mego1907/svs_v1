@@ -10,10 +10,13 @@ import {
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { usePathname } from "next/navigation";
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
 const ParticlesBackrgound = () => {
   const [init, setInit] = useState(false);
+
+  const path = usePathname();
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -105,7 +108,7 @@ const ParticlesBackrgound = () => {
     []
   );
 
-  if (init) {
+  if (init && path !== "/whitepaper") {
     return (
       <Particles
         id="tsparticles"

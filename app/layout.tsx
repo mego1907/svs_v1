@@ -15,7 +15,7 @@ const dm_sans = DM_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "SVS ",
   description: "SVS coin",
-  icons: ["/assets/images/logo.png", "/assets/images/logo-share.jpg"],
+  icons: ["/assets/images/logo.png"],
 };
 
 export default function RootLayout({

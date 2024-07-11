@@ -23,6 +23,10 @@ const Header = () => {
 
   const router = useRouter();
 
+  const handleOpenWhitePaper = () => {
+    window.open("/api/download", "_blank");
+  };
+
   useEffect(() => {
     // ..coin animation
     gsap.to(logoRef.current, {
@@ -73,6 +77,9 @@ const Header = () => {
             <a
               href="/whitepaper"
               target="_blank"
+              // onClick={() => {
+              //   router.push("/whitepaper");
+              // }}
               className="flex gap-2 border md:p-3 rounded-lg md:px-6 items-center justify-center p-2"
             >
               <IoDocumentTextOutline fontSize={30} />

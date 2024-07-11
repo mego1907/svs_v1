@@ -56,7 +56,9 @@ const Navbar = () => {
     <nav
       className={`${
         scroll ? "bg-slate-800" : "bg-transparent"
-      } fixed w-full z-50 top-0 start-0 text-white`}
+      } fixed w-full z-50 top-0 start-0 text-white ${
+        path === "/whitepaper" && "hidden"
+      }`}
     >
       <div
         className={`container mx-auto flex flex-wrap items-center justify-between transition-all ${
