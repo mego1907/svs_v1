@@ -14,6 +14,7 @@ const SEO: React.FC = () => {
     <Head>
       <title>SVS</title>
       <meta name="description" content="SVS coin" />
+      <link rel="icon" href="/assets/images/logoo.png" />
       <meta property="og:title" content="SVS" />
       <meta property="og:description" content="SVS coin" />
       <meta property="og:image" content={"/assets/images/logo-share.jpg"} />
