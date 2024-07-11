@@ -37,7 +37,7 @@ const SingleNew = () => {
   );
 
   return (
-    <div className="min-h-screen bg-mainBg text-whit">
+    <div className="min-h-screen bg-mainBg text-white">
       <div className="container mx-auto pt-32 text-center flex flex-col items-center justify-center ">
         <div className="relative w-10/12 h-[500px] mb-10">
           <img
