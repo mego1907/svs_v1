@@ -46,8 +46,8 @@ const News = () => {
     <div className="bg-mainBg min-h-screen text-whit">
       <div className="pt-40">
         <div className="container mx-auto">
-          <div className="flex justify-between items-center">
-            <h2 className="text-left text-4xl leading-snug font-semibold mb-10">
+          <div className="flex justify-between items-center md:mb-0 mb-10 md:px-0 px-6 flex-wrap">
+            <h2 className="text-left text-4xl leading-snug font-semibold md:mb-6">
               News
             </h2>
 
