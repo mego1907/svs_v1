@@ -10,6 +10,7 @@ import { DM_Sans, Inter, Montserrat } from "next/font/google";
 
 import ThreeDCoin from "./CoinAnimation";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -70,10 +71,9 @@ const Header = () => {
 
           <div className="flex md:gap-8 gap-4 mt-16 md:ml-2">
             <a
-              href="/assets/whitepaper.pdf"
+              href="/whitepaper"
               target="_blank"
               className="flex gap-2 border md:p-3 rounded-lg md:px-6 items-center justify-center p-2"
-              download={true}
             >
               <IoDocumentTextOutline fontSize={30} />
               <span className="md:text-lg text-sm">White Paper</span>

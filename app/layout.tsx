@@ -6,16 +6,16 @@ import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
 import "primereact/resources/themes/lara-dark-cyan/theme.css";
 import "swiper/swiper-bundle.css";
 import SocialMedia from "@/components/SocialMedia";
+import SEO from "@/components/SEO";
 
 const inter = Inter({ subsets: ["latin"] });
 const montserrat = Montserrat({ subsets: ["latin"] });
 const dm_sans = DM_Sans({ subsets: ["latin"] });
 
-// export const metadata: Metadata = {
-//   title: "SVS ",
-//   description: "SVS coin",
-//   icons: ["/assets/images/logo.png"],
-// };
+export const metadata: Metadata = {
+  title: "SVS ",
+  icons: ["/assets/images/logo.png"],
+};
 
 export default function RootLayout({
   children,
@@ -25,16 +25,22 @@ export default function RootLayout({
   return (
     <PrimeReactProvider>
       <html lang="en">
-        <head>
+        {/* <head>
           <title>SVS</title>
           <meta property="og:image" content="/assets/images/logoo.png" />
           <meta name="description" content="SVS coin" />
           <link
             rel="shortcut icon"
-            href="/public/assets/images/logoo.png"
+            href="/assets/images/logoo.png"
             type="image/x-icon"
           />
-        </head>
+        </head> */}
+        <SEO
+          description="SVS coin"
+          image="/assets/images/logoo.png"
+          title="SVS"
+          url=""
+        />
         <body className={dm_sans.className}>
           <ParticlesBackrgound />
 
