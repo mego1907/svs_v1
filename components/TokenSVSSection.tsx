@@ -125,7 +125,7 @@ const TokenSVSSection = () => {
           <div className="md:px-0 px-20">
             <div className="xl:w-[526px] w-full md:h-[827px]">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/qnewwww.png"
+                src="/assets/images/qnewwww.png"
                 alt=""
                 width={526}
                 height={827}

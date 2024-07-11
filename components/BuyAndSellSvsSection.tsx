@@ -13,22 +13,22 @@ const BuyAndSellSvsSection = () => {
 
   const data1 = [
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/bank.png",
+      image: "/assets/images/bank.png",
       title: "Bank Transfers",
     },
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/wallet.png",
+      image: "/assets/images/wallet.png",
       title: "Online Wallets",
     },
   ];
 
   const data2 = [
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/cash.png",
+      image: "/assets/images/cash.png",
       title: "Cash Payment",
     },
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/debit.png",
+      image: "/assets/images/debit.png",
       title: "Debit/Credit Cards",
     },
   ];
@@ -112,7 +112,7 @@ const BuyAndSellSvsSection = () => {
 
           <div>
             <img
-              src="https://svscoin.org/wp-content/uploads/2024/07/Green-White-Aesthetic-Skincare-Branding-Logo.png"
+              src="/assets/images/Green-White-Aesthetic-Skincare-Branding-Logo.png"
               alt=""
               ref={mobileRef}
             />

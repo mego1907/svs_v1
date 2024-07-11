@@ -43,7 +43,7 @@ const GetStartedSection = () => {
           <div className="flex flex-col justify-center items-center gap-4">
             <div className="w-40 flex items-center justify-center">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/man.png"
+                src="/assets/images/man.png"
                 width={60}
                 height={60}
                 alt="Safe Platform"
@@ -61,7 +61,7 @@ const GetStartedSection = () => {
           <div className="flex flex-col justify-center items-center gap-4">
             <div className="w-40 flex items-center justify-center">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/bank2.png"
+                src="/assets/images/bank2.png"
                 width={60}
                 height={60}
                 alt="Safe Platform"
@@ -79,7 +79,7 @@ const GetStartedSection = () => {
           <div className="flex flex-col justify-center items-center gap-4">
             <div className="w-40 flex items-center justify-center">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/buy.png"
+                src="/assets/images/buy.png"
                 width={60}
                 height={60}
                 alt="Safe Platform"

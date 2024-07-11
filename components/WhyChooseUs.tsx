@@ -13,12 +13,12 @@ const WhyChooseUs = () => {
 
   const data1 = [
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/icon-4.png",
+      image: "/assets/images/icon-4 (1).png",
       title: "Experience:",
       desc: "With SVS COIN years of experience in the crypto industry, we bring deep expertise and a proven track record of delivering results.",
     },
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/icon-6.png",
+      image: "/assets/images/icon-6 (1).png",
       title: "Range of Services:",
       desc: "Whether you're a seasoned investor or new to cryptocurrencies, we offer a comprehensive range of services tailored to meet your needs.",
     },
@@ -26,12 +26,12 @@ const WhyChooseUs = () => {
 
   const data2 = [
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/icon-6.png",
+      image: "/assets/images/icon-6 (1).png",
       title: "Approach:",
       desc: "We prioritize our clients' needs above all else, offering personalized support and guidance every step of the way.",
     },
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/icon-5.png",
+      image: "/assets/images/icon-5 (1).png",
       title: "Innovation and Vision:",
       desc: "Beyond the present, we envision the future ol finance. Our innovative solutions pave the way for tomorrow's digital economy:",
     },
@@ -123,7 +123,7 @@ const WhyChooseUs = () => {
           <div className="flex items-center justify-center">
             <div className="md:w-[416px] h-[411px] w-10/12 relative">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/png-o.png"
+                src="/assets/images/png-o.png"
                 alt=""
                 fill
                 objectFit="contain"

@@ -88,7 +88,7 @@ const SecureComponent = () => {
           <div className="flex gap-4">
             <div className="w-40 flex items-start justify-center">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/secure.png"
+                src="/assets/images/secure.png"
                 width={60}
                 height={60}
                 alt="Safe Platform"
@@ -106,7 +106,7 @@ const SecureComponent = () => {
           <div className="flex gap-4">
             <div className="w-40 flex items-start justify-center">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/insurance.png"
+                src="/assets/images/insurance.png"
                 width={60}
                 height={60}
                 alt="Safe Platform"
@@ -127,7 +127,7 @@ const SecureComponent = () => {
           <div className="flex gap-4">
             <div className="w-40 flex items-start justify-center">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/Easy-to-withdraw.png"
+                src="/assets/images/Easy-to-withdraw.png"
                 width={60}
                 height={60}
                 alt="Safe Platform"

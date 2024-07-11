@@ -26,26 +26,26 @@ const NewsSection = () => {
     getData();
   }, []);
 
-  const data = [
-    {
-      image:
-        "https://svscoin.org/wp-content/uploads/2024/07/medi2-scaled-1.jpg",
-      title: "Events",
-      id: 1,
-    },
-    {
-      image:
-        "https://svscoin.org/wp-content/uploads/2024/07/medi1-scaled-1.jpg",
-      title: "Media",
-      id: 2,
-    },
-    {
-      image:
-        "https://svscoin.org/wp-content/uploads/2024/07/media3-scaled-1.jpg",
-      title: "News",
-      id: 3,
-    },
-  ];
+  // const data = [
+  //   {
+  //     image:
+  //       "https://svscoin.org/wp-content/uploads/2024/07/medi2-scaled-1.jpg",
+  //     title: "Events",
+  //     id: 1,
+  //   },
+  //   {
+  //     image:
+  //       "https://svscoin.org/wp-content/uploads/2024/07/medi1-scaled-1.jpg",
+  //     title: "Media",
+  //     id: 2,
+  //   },
+  //   {
+  //     image:
+  //       "https://svscoin.org/wp-content/uploads/2024/07/media3-scaled-1.jpg",
+  //     title: "News",
+  //     id: 3,
+  //   },
+  // ];
 
   return (
     <div>

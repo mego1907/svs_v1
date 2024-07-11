@@ -53,10 +53,7 @@ const AboutSvsCoin = () => {
             </p>
           </div>
           <div className="flex items-center justify-center">
-            <img
-              src="https://svscoin.org/wp-content/uploads/2024/07/bbb.png"
-              alt=""
-            />
+            <img src="/assets/images/bbb.png" alt="" />
           </div>
         </div>
       </div>

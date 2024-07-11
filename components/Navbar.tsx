@@ -73,8 +73,8 @@ const Navbar = () => {
           ref={logoRef}
         >
           <Image
-            // src="/assets/images/logoo.png"
-            src="https://svscoin.org/theme-assets/images-3d-graphics/ctcbig.png"
+            src="/assets/images/logoo.png"
+            // src="https://svscoin.org/theme-assets/images-3d-graphics/ctcbig.png"
             alt=""
             fill
             objectFit="contain"

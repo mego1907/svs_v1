@@ -4,34 +4,31 @@ import React from "react";
 const PartnersAndSuporters = () => {
   const partnersImages = [
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/nwe.png",
+      image: "/assets/images/nwe.png",
       link: "https://azbit.com/exchange/SVS_USDT",
     },
     {
-      image:
-        "https://svscoin.org/wp-content/uploads/2024/07/Coinpaprika-W-f.png",
+      image: "/assets/images/Coinpaprika-W-f.png",
       link: "https://dex-trade.com/spot/trading/SVSUSDT?interface=classic",
     },
 
     {
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Uniswap_Logo_and_Wordmark.png/240px-Uniswap_Logo_and_Wordmark.png",
+      image: "/assets/images/240px-Uniswap_Logo_and_Wordmark.png",
       link: "https://app.uniswap.org/?intro=true",
     },
   ];
 
   const listedOnImage = [
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/CCC.png",
+      image: "/assets/images/CCC.png",
       link: "https://coinpaprika.com/coin/svs-svs-coin/",
     },
     {
-      image:
-        "https://s.geckoterminal.com/_next/static/media/logo_dark.6b1547fe.png",
+      image: "/assets/images/logo_dark.webp",
       link: "https://www.geckoterminal.com/polygon_pos/pools/0xea6d0718a0b84c90c0764aeaee1a24a06f7cbd2e",
     },
     {
-      image: "https://svscoin.org/wp-content/uploads/2024/07/Coin-2-f.png",
+      image: "/assets/images/Coin-2-f.png",
       link: "https://coincodex.com/crypto/svs-coin/",
     },
   ];

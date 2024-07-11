@@ -21,7 +21,7 @@ const WhitePaperSection = () => {
           <div className="flex items-center justify-center">
             <div className="md:w-[372px] md:h-[372px] relative w-[150px] h-[150px]">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/blockchain.png"
+                src="/assets/images/blockchain.png"
                 alt=""
                 fill
                 objectFit="contain"

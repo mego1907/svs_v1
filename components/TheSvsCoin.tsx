@@ -17,7 +17,7 @@ const TheSvsCoin = () => {
 
             <div className="md:w-[540px] md:h-[335px] h-[200px] w-8/12 relative">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/fffffffffffffffffffffffffffffff.png"
+                src="/assets/images/fffffffffffffffffffffffffffffff.png"
                 fill
                 objectFit="contain"
                 alt=""
@@ -38,7 +38,7 @@ const TheSvsCoin = () => {
             </h3>
             <div className="md:w-[540px] md:h-[335px] h-[200px] w-8/12 relative">
               <Image
-                src="https://svscoin.org/wp-content/uploads/2024/07/fffffffffffffffffff2.png"
+                src="/assets/images/fffffffffffffffffff2.png"
                 fill
                 objectFit="contain"
                 alt=""
