@@ -28,10 +28,6 @@ export default function RootLayout({
       <html lang="en">
         <head>
           <meta
-            property="og:image"
-            content="https://svs-v1.vercel.app/assets/images/logo-share.jpg"
-          />
-          <meta
             name="viewport"
             content="width=device-width, initial-scale=1, maximum-scale=1"
           />
