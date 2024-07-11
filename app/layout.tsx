@@ -35,12 +35,7 @@ export default function RootLayout({
             type="image/x-icon"
           />
         </head> */}
-        <SEO
-          description="SVS coin"
-          image="/assets/images/logoo.png"
-          title="SVS"
-          url=""
-        />
+        <SEO />
         <body className={dm_sans.className}>
           <ParticlesBackrgound />
 
