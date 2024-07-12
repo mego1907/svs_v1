@@ -20,12 +20,12 @@ export async function generateMetadata(props: {
     title: `${member?.name}`,
     description: "member in SVS coin",
     keywords: ["SVS", "coin", "blockchain"],
-    openGraph: {
-      url: `https://svs-v1.vercel.app/team/${member?.id}/`,
-      title: `${member?.name}`,
-      description: `${member?.desc}`,
-      images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
-    },
+    // openGraph: {
+    //   url: `https://svs-v1.vercel.app/team/${member?.id}/`,
+    //   title: `${member?.name}`,
+    //   description: `${member?.desc}`,
+    //   images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
+    // },
   };
 }
 
