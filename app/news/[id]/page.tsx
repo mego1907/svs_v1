@@ -9,7 +9,8 @@ const getSingleNew = async (params: { id: string }) => {
     "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
   );
   const news = await response.json();
-  return news.Data.find((newData: { id: number }) => newData.id === +params.id);
+
+  return news.Data[0];
 };
 
 export async function generateMetadata(props: {
@@ -17,6 +18,7 @@ export async function generateMetadata(props: {
   searchParams: {};
 }): Promise<Metadata> {
   const singleNew = await getSingleNew(props.params);
+
   return {
     title: `${singleNew?.name}`,
     description: singleNew?.description,
@@ -25,17 +27,10 @@ export async function generateMetadata(props: {
       url: `https://svs-v1.vercel.app/team/${singleNew?.id}/`,
       title: `${singleNew?.name}`,
       description: `${singleNew?.desc}`,
-      images: [singleNew.imageurl],
+      images: [singleNew?.imageurl],
     },
   };
 }
-
-type NewType = {
-  id: number;
-  imageurl: string;
-  title: string;
-  body: string;
-};
 
 const SingleNew = async ({ params }: { params: { id: string } }) => {
   const singleNew = await getSingleNew(params);
