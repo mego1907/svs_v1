@@ -6,28 +6,28 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useMemo } from "react";
 import { BsLinkedin } from "react-icons/bs";
-import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaXTwitter } from "react-icons/fa6";
 
-// export async function generateMetadata(props: {
-//   params: { memberId: string };
-//   searchParams: {};
-// }): Promise<Metadata> {
-//   const member = teamData.find(
-//     (member) => member.id === +props.params.memberId
-//   );
+export async function generateMetadata(props: {
+  params: { memberId: string };
+  searchParams: {};
+}): Promise<Metadata> {
+  const member = teamData.find(
+    (member) => member.id === +props.params.memberId
+  );
 
-//   return {
-//     title: `{member?.name}`,
-//     description: "member in SVS coin",
-//     keywords: ["SVS", "coin", "blockchain"],
-//     openGraph: {
-//       url: `https://svs-v1.vercel.app/team/${member?.id}/`,
-//       title: `${member?.name}`,
-//       description: `${member?.desc}`,
-//       images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
-//     },
-//   };
-// }
+  return {
+    title: `{member?.name}`,
+    description: "member in SVS coin",
+    keywords: ["SVS", "coin", "blockchain"],
+    openGraph: {
+      url: `https://svs-v1.vercel.app/team/${member?.id}/`,
+      title: `${member?.name}`,
+      description: `${member?.desc}`,
+      images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
+    },
+  };
+}
 
 // export const metaData: Metadata = {
 //   title: `{member?.name}`,
@@ -71,24 +71,41 @@ const TeamMember = async ({
 
             <h3 className="text-2xl font-bold">{teamMember?.name}</h3>
             <div className="flex gap-4">
-              <a
-                href={teamMember?.socialMedia.facebook}
-                className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
-              >
-                <FaFacebookF color="#111827" fontSize={18} />
-              </a>
-              <a
-                href={teamMember?.socialMedia.linkedin}
-                className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
-              >
-                <BsLinkedin color="#111827" fontSize={18} />
-              </a>
-              <a
-                href={teamMember?.socialMedia.twitter}
-                className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
-              >
-                <FaXTwitter color="#111827" fontSize={18} />
-              </a>
+              {teamMember?.socialMedia.facebook && (
+                <a
+                  href={teamMember?.socialMedia.facebook}
+                  className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center relative z-40"
+                >
+                  <FaFacebookF color="#111827" fontSize={18} />
+                </a>
+              )}
+
+              {teamMember?.socialMedia.linkedin && (
+                <a
+                  href={teamMember?.socialMedia.linkedin}
+                  className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center relative z-40"
+                >
+                  <BsLinkedin color="#111827" fontSize={18} />
+                </a>
+              )}
+
+              {teamMember?.socialMedia.twitter && (
+                <a
+                  href={teamMember?.socialMedia.twitter}
+                  className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center relative z-40"
+                >
+                  <FaXTwitter color="#111827" fontSize={18} />
+                </a>
+              )}
+
+              {teamMember?.socialMedia.instagram && (
+                <a
+                  href={teamMember?.socialMedia.instagram}
+                  className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center relative z-40"
+                >
+                  <FaInstagram color="#111827" fontSize={18} />
+                </a>
+              )}
             </div>
             <p className="text-base">{teamMember?.position}</p>
           </div>
