@@ -67,10 +67,8 @@ const Header = () => {
           <p
             className={`md:text-base text-sm mt-8 md:mr-20 leading-8 ${montserrat.className}`}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi,
-            architecto quo. Ad facilis exercitationem unde est reiciendis
-            architecto modi officia sequi. Aspernatur incidunt ex beatae
-            sapiente eveniet voluptatibus facere fugit.
+            First decentralized marketing platform that allows services of fast
+            and secure transaction through SVS coin
           </p>
 
           <div className="flex md:gap-8 gap-4 mt-16 md:ml-2">
