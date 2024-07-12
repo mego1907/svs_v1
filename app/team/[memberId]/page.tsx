@@ -17,7 +17,7 @@ export async function generateMetadata(props: {
   );
 
   return {
-    title: `{member?.name}`,
+    title: `${member?.name}`,
     description: "member in SVS coin",
     keywords: ["SVS", "coin", "blockchain"],
     openGraph: {
