@@ -1,16 +1,34 @@
-"use client";
 import { newsData } from "@/dummy/data";
+import { Metadata } from "next";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useEffect, useMemo, useState } from "react";
 
-const getData = async () => {
+const getSingleNew = async (params: { id: string }) => {
   const response = await fetch(
     "https://min-api.cryptocompare.com/data/v2/news/?lang=EN"
   );
   const news = await response.json();
-  return news.Data[1];
+  return news.Data.find((newData: { id: number }) => newData.id === +params.id);
 };
+
+export async function generateMetadata(props: {
+  params: { id: string };
+  searchParams: {};
+}): Promise<Metadata> {
+  const singleNew = await getSingleNew(props.params);
+  return {
+    title: `${singleNew?.name}`,
+    description: singleNew?.description,
+    keywords: ["SVS", "coin", "blockchain"],
+    openGraph: {
+      url: `https://svs-v1.vercel.app/team/${singleNew?.id}/`,
+      title: `${singleNew?.name}`,
+      description: `${singleNew?.desc}`,
+      images: [singleNew.imageurl],
+    },
+  };
+}
 
 type NewType = {
   id: number;
@@ -19,22 +37,8 @@ type NewType = {
   body: string;
 };
 
-const SingleNew = () => {
-  const { id } = useParams();
-  const [singleNew, setSingleNew] = useState<NewType | undefined>(undefined);
-
-  useEffect(() => {
-    const getNewsData = async () => {
-      setSingleNew(await getData());
-    };
-
-    getNewsData();
-  }, []);
-
-  const selectedNew = useMemo(
-    () => newsData.find((item: { id: number }) => item.id === +id),
-    [id]
-  );
+const SingleNew = async ({ params }: { params: { id: string } }) => {
+  const singleNew = await getSingleNew(params);
 
   return (
     <div className="min-h-screen bg-mainBg text-white">
