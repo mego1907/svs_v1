@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: "https://svscoin.org/",
     title: "SVS",
     description: "SVS coin",
-    images: ["/assets/images/logo-share.jpg"],
+    images: ["https://svscoin.org/assets/images/logo-share.jpg"],
     type: "website",
   },
 };
