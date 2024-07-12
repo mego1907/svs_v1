@@ -24,7 +24,7 @@ export async function generateMetadata(props: {
       url: `https://svs-v1.vercel.app/team/${member?.id}/`,
       title: `${member?.name}`,
       description: `${member?.desc}`,
-      images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
+      images: [`https://svs-v1.vercel.app/${member?.image}`],
     },
   };
 }
