@@ -24,7 +24,7 @@ export async function generateMetadata(props: {
     description: singleNew?.body,
     keywords: ["SVS", "coin", "blockchain"],
     openGraph: {
-      url: `https://svs-v1.vercel.app/team/${singleNew?.id}/`,
+      url: `https://svscoin.org/team/${singleNew?.id}/`,
       title: `${singleNew?.title}`,
       description: `${singleNew?.body}`,
       images: [singleNew?.imageurl],

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   icons: ["/assets/images/logo.png"],
   keywords: ["SVS", "coin", "blockchain"],
   openGraph: {
-    url: "https://svs-v1.vercel.app",
+    url: "https://svscoin.org/",
     title: "SVS",
     description: "SVS coin",
     images: ["/assets/images/logo-share.jpg"],
