@@ -8,26 +8,38 @@ import React, { useMemo } from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 
-export async function generateMetadata(props: {
-  params: { memberId: string };
-  searchParams: {};
-}): Promise<Metadata> {
-  const member = teamData.find(
-    (member) => member.id === +props.params.memberId
-  );
+// export async function generateMetadata(props: {
+//   params: { memberId: string };
+//   searchParams: {};
+// }): Promise<Metadata> {
+//   const member = teamData.find(
+//     (member) => member.id === +props.params.memberId
+//   );
 
-  return {
+//   return {
+//     title: `{member?.name}`,
+//     description: "member in SVS coin",
+//     keywords: ["SVS", "coin", "blockchain"],
+//     openGraph: {
+//       url: `https://svs-v1.vercel.app/team/${member?.id}/`,
+//       title: `${member?.name}`,
+//       description: `${member?.desc}`,
+//       images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
+//     },
+//   };
+// }
+
+export const metaData: Metadata = {
+  title: `{member?.name}`,
+  description: "member in SVS coin",
+  keywords: ["SVS", "coin", "blockchain"],
+  openGraph: {
+    url: `https://svs-v1.vercel.app/team/${member?.id}/`,
     title: `{member?.name}`,
-    description: "member in SVS coin",
-    keywords: ["SVS", "coin", "blockchain"],
-    // openGraph: {
-    //   url: `https://svs-v1.vercel.app/team/${member?.id}/`,
-    //   title: `${member?.name}`,
-    //   description: `${member?.desc}`,
-    //   images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
-    // },
-  };
-}
+    description: `{member?.desc}`,
+    images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
+  },
+};
 
 const TeamMember = ({
   params: { memberID },
