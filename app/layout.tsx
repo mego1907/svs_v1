@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     title: "SVS",
     description: "SVS coin",
     images: ["/assets/images/logo-share.jpg"],
+    type: "website",
   },
 };
 
@@ -45,6 +46,7 @@ export default function RootLayout({
       <html lang="en">
         <head>
           <link rel="icon" href="/favicon.ico" sizes="any" />
+          <meta property="fb:app_id" content="1008136771035163" />
         </head>
         {/* <head>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
