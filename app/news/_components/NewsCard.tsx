@@ -8,12 +8,21 @@ type NewsCardProps = {
   title: string;
   id: number;
   imageurl: string;
+  index: number;
 };
 
-const NewsCard = ({ image, body, title, id, imageurl }: NewsCardProps) => {
+const NewsCard = ({
+  image,
+  body,
+  title,
+  id,
+  imageurl,
+  index,
+}: NewsCardProps) => {
+  console.log("index :", index);
   return (
     <Link
-      href={`/news/${id}`}
+      href={`/news/${index && index + 1}`}
       className="grid md:grid-cols-[1fr_3fr] gap-6 bg-white/20 p-2 rounded-md z-40 relative"
     >
       {/* Image */}
@@ -33,7 +42,7 @@ const NewsCard = ({ image, body, title, id, imageurl }: NewsCardProps) => {
           </p>
         </div>
         <Link
-          href={`/news/${id}`}
+          href={`/news/${index && index + 1}`}
           className="p-2 px-6 rounded-sm bg-secondary z-40 mt-6"
         >
           Click here

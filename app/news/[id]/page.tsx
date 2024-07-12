@@ -10,7 +10,7 @@ const getSingleNew = async (params: { id: string }) => {
   );
   const news = await response.json();
 
-  return news.Data[0];
+  return news.Data[+params.id];
 };
 
 export async function generateMetadata(props: {
@@ -18,8 +18,6 @@ export async function generateMetadata(props: {
   searchParams: {};
 }): Promise<Metadata> {
   const singleNew = await getSingleNew(props.params);
-
-  console.log("singleNew :", singleNew);
 
   return {
     title: `${singleNew?.title}`,

@@ -71,9 +71,10 @@ const News = () => {
           <div className="flex flex-col  gap-10 px-5 md:px-0 ">
             {loading && <Loading />}
 
-            {newsData.map((item: SingleNewType, index) => (
-              <NewsCard {...item} key={index} />
-            ))}
+            {newsData.map((item: SingleNewType, index) => {
+              console.log("index :", index);
+              return <NewsCard {...item} index={index} key={index} />;
+            })}
           </div>
           {/* <NewCard {...item} key={index} /> */}
         </div>
