@@ -10,14 +10,14 @@ const TeamSlider = () => {
       spaceBetween={50}
       slidesPerView={3}
       breakpoints={{
-        300: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
-        768: {
-          slidesPerView: 1,
-          spaceBetween: 10,
-        },
+        // 300: {
+        //   slidesPerView: 1,
+        //   spaceBetween: 10,
+        // },
+        // 768: {
+        //   slidesPerView: 1,
+        //   spaceBetween: 10,
+        // },
         1024: {
           slidesPerView: 2,
           spaceBetween: 10,

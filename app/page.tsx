@@ -22,17 +22,19 @@ import {
 import SEO from "@/components/SEO";
 import { Metadata } from "next";
 
-// export const metaData: Metadata = {
-//   title: "SVS ",
-//   description: "SVS coin",
-//   keywords: ["SVS", "coin", "blockchain"],
-//   openGraph: {
-//     url: "https://svs-v1.vercel.app",
-//     title: "SVS",
-//     description: "SVS coin",
-//     images: ["https://svs-v1.vercel.app/assets/images/logo-share.jpg"],
-//   },
-// };
+export const metadata: Metadata = {
+  title: "SVS ",
+  description: "SVS coin",
+  icons: ["/assets/images/logo.png"],
+  keywords: ["SVS", "coin", "blockchain"],
+  openGraph: {
+    url: "https://svs-v1.vercel.app",
+    title: "SVS",
+    description: "SVS coin",
+    images: ["/assets/images/logo-share.jpg"],
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
