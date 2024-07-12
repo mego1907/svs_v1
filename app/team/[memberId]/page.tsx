@@ -41,14 +41,17 @@ import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 //   },
 // };
 
-const TeamMember = ({
-  params: { memberID },
-  searchParams,
+const getTeamMember = (memberId: string) => {
+  const member = teamData.find((member) => member.id === +memberId);
+  return member;
+};
+
+const TeamMember = async ({
+  params: { memberId },
 }: {
-  params: { memberID: string };
-  searchParams: {};
+  params: { memberId: string };
 }) => {
-  const member = teamData.find((member) => member.id === +memberID);
+  const teamMember = getTeamMember(memberId);
 
   return (
     <div className="bg-mainBg min-h-screen text-white">
@@ -58,41 +61,40 @@ const TeamMember = ({
             <div className="flex items-center justify-center">
               <div className="md:w-[400px] w-[200px] h-[200px] md:h-[400px] rounded-3xl z-40 relative overflow-hidden md:px-0 px-6">
                 <Image
-                  src={member?.image || ""}
+                  src={teamMember?.image || ""}
                   fill
                   objectFit="cover"
-                  alt=""
-                  className=""
+                  alt={teamMember?.name || ""}
                 />
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold">{member?.name}</h3>
+            <h3 className="text-2xl font-bold">{teamMember?.name}</h3>
             <div className="flex gap-4">
               <a
-                href={member?.socialMedia.facebook}
+                href={teamMember?.socialMedia.facebook}
                 className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
               >
                 <FaFacebookF color="#111827" fontSize={18} />
               </a>
               <a
-                href={member?.socialMedia.linkedin}
+                href={teamMember?.socialMedia.linkedin}
                 className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
               >
                 <BsLinkedin color="#111827" fontSize={18} />
               </a>
               <a
-                href={member?.socialMedia.twitter}
+                href={teamMember?.socialMedia.twitter}
                 className="w-10 h-10 rounded-full bg-gray-300 flex justify-center items-center"
               >
                 <FaXTwitter color="#111827" fontSize={18} />
               </a>
             </div>
-            <p className="text-base">{member?.position}</p>
+            <p className="text-base">{teamMember?.position}</p>
           </div>
 
           <p className="text-center mt-10 text-gray-300 md:px-60 px-5">
-            {member?.desc}
+            {teamMember?.desc}
           </p>
         </div>
       </div>
