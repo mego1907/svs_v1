@@ -19,14 +19,16 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const singleNew = await getSingleNew(props.params);
 
+  console.log("singleNew :", singleNew);
+
   return {
-    title: `${singleNew?.name}`,
-    description: singleNew?.description,
+    title: `${singleNew?.title}`,
+    description: singleNew?.body,
     keywords: ["SVS", "coin", "blockchain"],
     openGraph: {
       url: `https://svs-v1.vercel.app/team/${singleNew?.id}/`,
-      title: `${singleNew?.name}`,
-      description: `${singleNew?.desc}`,
+      title: `${singleNew?.title}`,
+      description: `${singleNew?.body}`,
       images: [singleNew?.imageurl],
     },
   };
