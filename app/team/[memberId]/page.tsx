@@ -29,17 +29,17 @@ import { FaFacebookF, FaXTwitter } from "react-icons/fa6";
 //   };
 // }
 
-export const metaData: Metadata = {
-  title: `{member?.name}`,
-  description: "member in SVS coin",
-  keywords: ["SVS", "coin", "blockchain"],
-  openGraph: {
-    url: `https://svs-v1.vercel.app/team/{member?.id}/`,
-    title: `{member?.name}`,
-    description: `{member?.desc}`,
-    images: ["https://svs-v1.vercel.app/assets/images/team-1.jpeg"],
-  },
-};
+// export const metaData: Metadata = {
+//   title: `{member?.name}`,
+//   description: "member in SVS coin",
+//   keywords: ["SVS", "coin", "blockchain"],
+//   openGraph: {
+//     url: `https://svs-v1.vercel.app/team/{member?.id}/`,
+//     title: `{member?.name}`,
+//     description: `{member?.desc}`,
+//     images: ["https://svs-v1.vercel.app/assets/images/team-1.jpeg"],
+//   },
+// };
 
 const TeamMember = ({
   params: { memberID },
