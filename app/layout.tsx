@@ -16,16 +16,36 @@ export const metadata: Metadata = {
   title: "SVS ",
   description: "SVS coin",
   icons: ["/assets/images/logo.png"],
+  keywords: ["SVS", "coin", "blockchain"],
+  openGraph: {
+    url: "https://svs-v1.vercel.app",
+    title: "SVS",
+    description: "SVS coin",
+    images: ["/assets/images/logo-share.jpg"],
+  },
 };
+
+// export default function RootLayout({
+//   children,
+//   params,
+// }: Readonly<{
+//   children: React.ReactNode;
+//   params: Object;
+// }>) {
 
 export default function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Object;
 }>) {
   return (
     <PrimeReactProvider>
       <html lang="en">
+        <head>
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+        </head>
         {/* <head>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
