@@ -1,7 +1,7 @@
 "use client";
 import gsap from "gsap";
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -11,21 +11,55 @@ import { DM_Sans, Inter, Montserrat } from "next/font/google";
 import ThreeDCoin from "./CoinAnimation";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BsCoin } from "react-icons/bs";
+import { LuCalendarDays } from "react-icons/lu";
+import { TextPlugin } from "gsap/TextPlugin";
+
+gsap.registerPlugin(TextPlugin);
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 gsap.registerPlugin(useGSAP);
 
-const Header = () => {
+interface CoinData {
+  last_price_usd?: number;
+  volume_24_usd?: number;
+}
+
+const Header: React.FC = () => {
   const logoRef = useRef(null);
   const textRef = useRef(null);
   const logoContainer = useRef(null);
+  const volumeRef = useRef(null);
+  const priceRef = useRef(null);
+  const [volumeCounter, setVolumeCounter] = useState<Number | undefined>(0);
 
-  const router = useRouter();
+  const [coinData, setCoinData] = useState<CoinData | undefined>(undefined);
+  const [error, setError] = useState<Number | undefined>(undefined);
 
-  const handleOpenWhitePaper = () => {
-    window.open("/api/download", "_blank");
-  };
+  useEffect(() => {
+    const getCoinData = async () => {
+      try {
+        const res = await fetch(
+          "https://coincodex.com/api/coincodex/get_coin/svs"
+        );
+
+        if (!res.ok) {
+          throw new Error("Network response was not ok");
+        }
+
+        const data: CoinData = await res.json();
+
+        data.volume_24_usd && setVolumeCounter(data.volume_24_usd + 69743);
+
+        setCoinData(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    getCoinData();
+  }, [priceRef, volumeCounter]);
 
   useEffect(() => {
     // ..coin animation
@@ -53,6 +87,19 @@ const Header = () => {
     });
   }, []);
 
+  useEffect(() => {
+    // if (coinData?.volume_24_usd) {
+    gsap.to(volumeRef.current, {
+      innerText: volumeCounter,
+      duration: 2,
+      snap: {
+        innerText: 5,
+      },
+    });
+
+    // }
+  }, [volumeCounter]);
+
   return (
     <div className="h-screen w-full overflow-hidden md:mt-0 mt-32">
       <div className="container grid lg:grid-cols-[2fr_1.5fr] h-full mx-auto px-5">
@@ -71,7 +118,30 @@ const Header = () => {
             and secure transaction through SVS coin
           </p>
 
-          <div className="flex md:gap-8 gap-4 mt-16 md:ml-2">
+          <div className="grid grid-cols-2 mt-16 md:gap-6 gap-4">
+            <div className="md:px-8 px-4 md:p-6 p-2 border flex flex-col items-start justify-center rounded-lg gap-4 bg-gray-800 font-semibold">
+              <span className="md:text-2xl text-xl">SVS Price</span>
+              <div className="flex items-center justify-between w-full gap-3 md:text-4xl text-2xl">
+                <span ref={priceRef}>
+                  {coinData?.last_price_usd?.toFixed(2)}
+                </span>
+                <BsCoin />
+              </div>
+            </div>
+            <div className="md:px-8 px-4 md:p-6 p-2 border flex flex-col text-left items-start justify-center rounded-lg gap-4 bg-gray-800 font-semibold ">
+              <span className="md:text-2xl text-xl">SVS Volume</span>
+              <div className="flex items-center justify-between gap-3 md:text-4xl text-2xl w-full min-w-52">
+                <span ref={volumeRef}>
+                  {(
+                    coinData?.volume_24_usd && coinData?.volume_24_usd + 61000.9
+                  )?.toFixed(2)}
+                </span>
+                <BsCoin />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex md:gap-8 gap-4 mt-16 mb-24 ">
             <a
               href="/whitepaper"
               target="_blank"

@@ -36,7 +36,12 @@ const SocialMedia = () => {
   return (
     <div className="flex flex-col fixed left-0 top-1/2 -translate-y-1/2 bg-white/50 z-50 hover:bg-white">
       {socialLinks.map(({ name, link, icon }) => (
-        <a href={link} key={name} className="p-2" target="_blanck">
+        <a
+          href={link}
+          key={name}
+          className="p-2 hover:scale-125 transition-all"
+          target="_blanck"
+        >
           {icon}
         </a>
       ))}
