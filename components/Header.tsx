@@ -130,7 +130,7 @@ const Header: React.FC = () => {
             </div>
             <div className="md:px-8 px-4 md:p-6 p-2 border flex flex-col text-left items-start justify-center rounded-lg gap-4 bg-gray-800 font-semibold ">
               <span className="md:text-2xl text-xl">SVS Volume</span>
-              <div className="flex items-center justify-between gap-3 md:text-4xl text-2xl w-full min-w-52">
+              <div className="flex items-center justify-between gap-3 md:text-4xl text-2xl w-full md:min-w-52 min-w-20">
                 <span ref={volumeRef}>
                   {(
                     coinData?.volume_24_usd && coinData?.volume_24_usd + 61000.9
